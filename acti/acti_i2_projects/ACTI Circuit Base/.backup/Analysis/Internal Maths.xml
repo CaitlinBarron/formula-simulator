@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataBlock Locale="English" Flags="0">
+  <Descriptors Version="10" Locale="English" Flags="7">
+    <Descriptor Id="Calc Lap Time" DataType="MoTeC.Float" DisplayColorIndex="6" DisplayDPS="3" DisplayUnit="s"/>
+    <Descriptor Id="Calc Outing Time" DataType="MoTeC.Float" DisplayColorIndex="1" DisplayDPS="3" DisplayUnit="s"/>
+    <Descriptor Id="Corr Dist" DataType="MoTeC.Float" DisplayColorIndex="6" DisplayDPS="0" DisplayUnit="m"/>
+    <Descriptor Id="Corr Dist (Unstretched)" DataType="MoTeC.Float" DisplayColorIndex="1" DisplayDPS="0" DisplayUnit="m"/>
+    <Descriptor Id="Corr Lap Dist" DataType="MoTeC.Float" DisplayColorIndex="1" DisplayDPS="0" DisplayUnit="m"/>
+    <Descriptor Id="Corr Outing Dist" DataType="MoTeC.Float" DisplayColorIndex="3" DisplayDPS="0" DisplayUnit="m"/>
+    <Descriptor Id="Corr Speed" DataType="MoTeC.Float" DisplayColorIndex="4" DisplayDPS="1" DisplayUnit="km/h"/>
+    <Descriptor Id="Damper Vel FL" DataType="MoTeC.Float" DisplayColorIndex="0" DisplayDPS="1" DisplayUnit="mm/s"/>
+    <Descriptor Id="Damper Vel FR" DataType="MoTeC.Float" DisplayColorIndex="4" DisplayDPS="1" DisplayUnit="mm/s"/>
+    <Descriptor Id="Damper Vel Front" DataType="MoTeC.Float" DisplayColorIndex="6" DisplayDPS="1" DisplayUnit="mm/s"/>
+    <Descriptor Id="Damper Vel Rear" DataType="MoTeC.Float" DisplayColorIndex="1" DisplayDPS="1" DisplayUnit="mm/s"/>
+    <Descriptor Id="Damper Vel RL" DataType="MoTeC.Float" DisplayColorIndex="6" DisplayDPS="1" DisplayUnit="mm/s"/>
+    <Descriptor Id="Damper Vel RR" DataType="MoTeC.Float" DisplayColorIndex="3" DisplayDPS="1" DisplayUnit="mm/s"/>
+  </Descriptors>
+  <Maths Id="Internal" Flags="196" Locale="English">
+    <MathItems>
+      <MathPlugin ProgId="MoTeC.CircuitMaths.1.3" Params="4:0;Wheel Speed FL;Wheel Speed FR:1:[Ground Speed;Wheel Speed FL;Wheel Speed FR;Wheel Speed Front;Wheel Speed;Wheel Speed RL;Wheel Speed RR;Wheel Speed Rear;Drive Speed;Dig In 1 Speed;Dig In 2 Speed]:0;GPS Speed:0;G Force Long;-1;0;0.5:0;Corr Speed;Lap Distance:1;5:1;1:0" Active="1"/>
+      <MathPlugin ProgId="MoTeC.SuspensionMaths.1.3" Params="1,1,80000,1,1" Active="1"/>
+      <MathPlugin ProgId="MoTeC.GPSMaths.1.0" Params="V2:GPS Latitude:GPS Longitude:Ground Speed:1:1:a:0.000000:0.800000:[]:1:GPS Sats Used:0.000000::0:0.000000:[]" Active="0"/>
+    </MathItems>
+  </Maths>
+</DataBlock>

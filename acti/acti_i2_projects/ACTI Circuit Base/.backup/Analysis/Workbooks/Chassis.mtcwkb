@@ -1,0 +1,380 @@
+<?xml version="1.0"?>
+<Workbook Locale="English_United States.1252" Version="101" Profile="Circuit">
+  <Worksheets ActiveChild="CG Accel">
+    <Worksheet Name="CG Accel" LinkTo="Laps" DataMode="1" ShowCursorValues="1" GridSize="100,100" LockByGPSTime="0">
+      <Controls ActiveControl="Copy (1) of Copy (1) of Copy (1) of Time/Distance [2]">
+        <Control Id="MoTeC.TimeDistance" Name="Copy (1) of Copy (1) of Copy (1) of Time/Distance [2]" Caption="Driver Inputs" AutoCaption="0" Supports="0" RectGridPts="0,0,100,31" DisplayTitleBar="0" LinkTo="Laps" LinkZoom="1" ModeId="0" ShowDataLegend="1" Version="2" TraceLineWidth="1" TracePointSize="3" TraceStyle="0" LinkCursor="1" LinkDatum="1" ShowKeyValues="1" ShowKeyStats="1" KeyMode="0" KeyPos="1" ShowGridLines="1" ShowXAxis="1" ShowXAxisScrollBar="0" ShowYAxis="1" ShowYAxisScrollBar="1" ShowMarkers="1" ShowBands="1" BandGroup="Outings:Laps:Track Sections:Default" BandMode="1" OverlapMode="0" VariancePos="0.25" VarianceAutoScale="0" VarianceMin="-1" VarianceMax="1">
+          <Graphs ActivateChild="Group 1">
+            <Graph Name="Group 1" ScaleMode="1" ScaleMin="0" ScaleMax="130">
+              <Edges Mode="0" TopEdge="0" BottomEdge="499"/>
+              <Edges Mode="1" TopEdge="0" BottomEdge="1000"/>
+              <Lines>
+                <Line Index="0" Enabled="1" Value="0" Color="210,210,210"/>
+                <Line Index="1" Enabled="0" Value="0" Color="0,0,248"/>
+                <Line Index="2" Enabled="0" Value="0" Color="248,0,0"/>
+              </Lines>
+              <Traces ActiveTrace="Throttle Pos">
+                <Trace Id="Throttle Pos" DisplayUnit="%" DisplayDPS="1" Visible="1"/>
+                <Trace Id="Brake Pos" DisplayUnit="%" DisplayDPS="1" Visible="1"/>
+              </Traces>
+            </Graph>
+            <Graph Name="Group 3" ScaleMode="1" ScaleMin="-300" ScaleMax="300">
+              <Edges Mode="0" TopEdge="499" BottomEdge="1000"/>
+              <Edges Mode="1" TopEdge="0" BottomEdge="1000"/>
+              <Lines>
+                <Line Index="0" Enabled="1" Value="0" Color="210,210,210"/>
+                <Line Index="1" Enabled="0" Value="0" Color="0,0,248"/>
+                <Line Index="2" Enabled="0" Value="0" Color="248,0,0"/>
+              </Lines>
+              <Traces ActiveTrace="Steering Angle">
+                <Trace Id="Steering Angle" DisplayUnit="deg" DisplayDPS="1" Visible="1"/>
+              </Traces>
+            </Graph>
+          </Graphs>
+          <Cursor Version="1" Type="1" Snap="1"/>
+        </Control>
+        <Control Id="MoTeC.Scatter" Name="Copy (1) of Scatter Plot [1]" Caption="Friction Circle" AutoCaption="0" Supports="0" RectGridPts="0,31,51,100" DisplayTitleBar="0" LinkTo="Laps" LinkZoom="1" ModeId="0" ShowDataLegend="1" ShowColorLegend="1" ActiveTrace="0" TileMode="1" TileActiveChan="0" TileAutoCols="1" TileCols="1" Version="2" XChannel="CG Accel Lateral" ZChannel="CG Accel Vertical" XScaleMode="1" XScaleMin="-3" XScaleMax="3" YScaleMode="1" YScaleMin="-3" YScaleMax="3" ZScaleMode="0" ShowGridLines="1" ShowGradient="1" ShowColorBinSamples="1" Style="2" Size="1" ShowLines="0" ShowRegEquation="1" LinePointMode="1" CursorStyle="3" RegressionType="1" RegressionParam="6" RegressionZero="0" RegressionDigits="3">
+          <Trace YChannel="CG Accel Longitudinal" Visible="1" YDelay="0"/>
+          <EvenWidthBandAxis PaletteMode="1" GradientMode="2" BandChanColor="64,255,64" AxisChanColor="255,0,0" Color1="128,0,255" Color2="128,0,255" ReversGradient="0" CentredBands="0" GreaterMaxBand="1" LessMinBand="1" BandMode="1" DataMin="-0.67475" DataMax="1.43095" BandWidth="0.21057" BandCount="10">
+            <ColorBand Flags="2" Min="-0.67475" Max="-0.67475" Color="128,0,255" Visible="1"/>
+            <ColorBand Flags="7" Min="-0.67475" Max="-0.46418" Color="128,0,255" Visible="1"/>
+            <ColorBand Flags="7" Min="-0.46418" Max="-0.25361" Color="128,0,255" Visible="1"/>
+            <ColorBand Flags="7" Min="-0.25361" Max="-0.04304" Color="128,0,255" Visible="1"/>
+            <ColorBand Flags="7" Min="-0.04304" Max="0.16753" Color="128,0,255" Visible="1"/>
+            <ColorBand Flags="7" Min="0.16753" Max="0.3781" Color="128,0,255" Visible="1"/>
+            <ColorBand Flags="7" Min="0.3781" Max="0.58867" Color="128,0,255" Visible="1"/>
+            <ColorBand Flags="7" Min="0.58867" Max="0.79924" Color="128,0,255" Visible="1"/>
+            <ColorBand Flags="7" Min="0.79924" Max="1.00981" Color="128,0,255" Visible="1"/>
+            <ColorBand Flags="7" Min="1.00981" Max="1.22038" Color="128,0,255" Visible="1"/>
+            <ColorBand Flags="15" Min="1.22038" Max="1.43095" Color="128,0,255" Visible="1"/>
+            <ColorBand Flags="1" Min="1.43095" Max="1.43095" Color="128,0,255" Visible="1"/>
+          </EvenWidthBandAxis>
+        </Control>
+        <Control Id="MoTeC.TimeDistance" Name="Time/Distance [1]" Caption="CG Accel" AutoCaption="0" Supports="0" RectGridPts="51,31,100,100" DisplayTitleBar="0" LinkTo="Laps" LinkZoom="1" ModeId="0" ShowDataLegend="1" Version="2" TraceLineWidth="1" TracePointSize="3" TraceStyle="0" LinkCursor="1" LinkDatum="1" ShowKeyValues="1" ShowKeyStats="1" KeyMode="0" KeyPos="1" ShowGridLines="1" ShowXAxis="1" ShowXAxisScrollBar="0" ShowYAxis="1" ShowYAxisScrollBar="1" ShowMarkers="1" ShowBands="1" BandGroup="Outings:Laps:Track Sections:Default" BandMode="1" OverlapMode="0" VariancePos="0.25" VarianceAutoScale="1">
+          <Graphs ActivateChild="Group 4">
+            <Graph Name="Group 4" ScaleMode="1" ScaleMin="0" ScaleMax="100">
+              <Edges Mode="0" TopEdge="0" BottomEdge="145"/>
+              <Edges Mode="1" TopEdge="0" BottomEdge="1000"/>
+              <Lines>
+                <Line Index="0" Enabled="1" Value="0" Color="210,210,210"/>
+                <Line Index="1" Enabled="0" Value="0" Color="0,0,248"/>
+                <Line Index="2" Enabled="0" Value="0" Color="248,0,0"/>
+              </Lines>
+              <Traces ActiveTrace="Ballast">
+                <Trace Id="Ballast" DisplayUnit="kg" DisplayDPS="1" Visible="1"/>
+              </Traces>
+            </Graph>
+            <Graph Name="Group 1" ScaleMode="1" ScaleMin="-3" ScaleMax="3">
+              <Edges Mode="0" TopEdge="145" BottomEdge="429"/>
+              <Edges Mode="1" TopEdge="0" BottomEdge="1000"/>
+              <Lines>
+                <Line Index="0" Enabled="1" Value="0" Color="210,210,210"/>
+                <Line Index="1" Enabled="0" Value="0" Color="0,0,248"/>
+                <Line Index="2" Enabled="0" Value="0" Color="248,0,0"/>
+              </Lines>
+              <Traces ActiveTrace="CG Accel Longitudinal">
+                <Trace Id="CG Accel Longitudinal" DisplayUnit="G" DisplayDPS="2" Visible="1"/>
+              </Traces>
+            </Graph>
+            <Graph Name="Group 2" ScaleMode="1" ScaleMin="-3" ScaleMax="3">
+              <Edges Mode="0" TopEdge="429" BottomEdge="713"/>
+              <Edges Mode="1" TopEdge="0" BottomEdge="1000"/>
+              <Lines>
+                <Line Index="0" Enabled="1" Value="0" Color="210,210,210"/>
+                <Line Index="1" Enabled="0" Value="0" Color="0,0,248"/>
+                <Line Index="2" Enabled="0" Value="0" Color="248,0,0"/>
+              </Lines>
+              <Traces ActiveTrace="CG Accel Lateral">
+                <Trace Id="CG Accel Lateral" DisplayUnit="G" DisplayDPS="2" Visible="1"/>
+              </Traces>
+            </Graph>
+            <Graph Name="Group 3" ScaleMode="1" ScaleMin="-2" ScaleMax="2">
+              <Edges Mode="0" TopEdge="713" BottomEdge="1000"/>
+              <Edges Mode="1" TopEdge="0" BottomEdge="1000"/>
+              <Lines>
+                <Line Index="0" Enabled="1" Value="0" Color="210,210,210"/>
+                <Line Index="1" Enabled="0" Value="0" Color="0,0,248"/>
+                <Line Index="2" Enabled="0" Value="0" Color="248,0,0"/>
+              </Lines>
+              <Traces ActiveTrace="CG Accel Vertical">
+                <Trace Id="CG Accel Vertical" DisplayUnit="G" DisplayDPS="2" Visible="1"/>
+              </Traces>
+            </Graph>
+          </Graphs>
+          <Cursor Version="1" Type="1" Snap="1"/>
+        </Control>
+      </Controls>
+    </Worksheet>
+    <Worksheet Name="Translation" LinkTo="Laps" DataMode="1" ShowCursorValues="1" GridSize="100,100" LockByGPSTime="0">
+      <Controls ActiveControl="Copy (1) of Copy (1) of Time/Distance [2]">
+        <Control Id="MoTeC.TimeDistance" Name="Copy (1) of Copy (1) of Time/Distance [2]" Caption="Driver Inputs" AutoCaption="0" Supports="0" RectGridPts="0,0,100,31" DisplayTitleBar="0" LinkTo="Laps" LinkZoom="1" ModeId="0" ShowDataLegend="1" Version="2" TraceLineWidth="1" TracePointSize="3" TraceStyle="0" LinkCursor="1" LinkDatum="1" ShowKeyValues="1" ShowKeyStats="1" KeyMode="0" KeyPos="1" ShowGridLines="1" ShowXAxis="1" ShowXAxisScrollBar="0" ShowYAxis="1" ShowYAxisScrollBar="1" ShowMarkers="1" ShowBands="1" BandGroup="Outings:Laps:Track Sections:Default" BandMode="1" OverlapMode="0" VariancePos="0.25" VarianceAutoScale="0" VarianceMin="-1" VarianceMax="1">
+          <Graphs ActivateChild="Group 1">
+            <Graph Name="Group 1" ScaleMode="1" ScaleMin="0" ScaleMax="130">
+              <Edges Mode="0" TopEdge="0" BottomEdge="499"/>
+              <Edges Mode="1" TopEdge="0" BottomEdge="1000"/>
+              <Lines>
+                <Line Index="0" Enabled="1" Value="0" Color="210,210,210"/>
+                <Line Index="1" Enabled="0" Value="0" Color="0,0,248"/>
+                <Line Index="2" Enabled="0" Value="0" Color="248,0,0"/>
+              </Lines>
+              <Traces ActiveTrace="Throttle Pos">
+                <Trace Id="Throttle Pos" DisplayUnit="%" DisplayDPS="1" Visible="1"/>
+                <Trace Id="Brake Pos" DisplayUnit="%" DisplayDPS="1" Visible="1"/>
+              </Traces>
+            </Graph>
+            <Graph Name="Group 3" ScaleMode="1" ScaleMin="-300" ScaleMax="300">
+              <Edges Mode="0" TopEdge="499" BottomEdge="1000"/>
+              <Edges Mode="1" TopEdge="0" BottomEdge="1000"/>
+              <Lines>
+                <Line Index="0" Enabled="1" Value="0" Color="210,210,210"/>
+                <Line Index="1" Enabled="0" Value="0" Color="0,0,248"/>
+                <Line Index="2" Enabled="0" Value="0" Color="248,0,0"/>
+              </Lines>
+              <Traces ActiveTrace="Steering Angle">
+                <Trace Id="Steering Angle" DisplayUnit="deg" DisplayDPS="1" Visible="1"/>
+              </Traces>
+            </Graph>
+          </Graphs>
+          <Cursor Version="1" Type="1" Snap="1"/>
+        </Control>
+        <Control Id="MoTeC.TimeDistance" Name="Copy (1) of Time/Distance [1]" Caption="CG Accel" AutoCaption="0" Supports="0" RectGridPts="0,31,100,100" DisplayTitleBar="0" LinkTo="Laps" LinkZoom="1" ModeId="0" ShowDataLegend="1" Version="2" TraceLineWidth="1" TracePointSize="3" TraceStyle="0" LinkCursor="1" LinkDatum="1" ShowKeyValues="1" ShowKeyStats="1" KeyMode="0" KeyPos="1" ShowGridLines="1" ShowXAxis="1" ShowXAxisScrollBar="0" ShowYAxis="1" ShowYAxisScrollBar="1" ShowMarkers="1" ShowBands="1" BandGroup="Outings:Laps:Track Sections:Default" BandMode="1" OverlapMode="0" VariancePos="0.25" VarianceAutoScale="1">
+          <Graphs ActivateChild="Group 2">
+            <Graph Name="Group 1" ScaleMode="1" ScaleMin="-10" ScaleMax="90">
+              <Edges Mode="0" TopEdge="0" BottomEdge="332"/>
+              <Edges Mode="1" TopEdge="0" BottomEdge="1000"/>
+              <Lines>
+                <Line Index="0" Enabled="1" Value="0" Color="210,210,210"/>
+                <Line Index="1" Enabled="0" Value="0" Color="0,0,248"/>
+                <Line Index="2" Enabled="0" Value="0" Color="248,0,0"/>
+              </Lines>
+              <Traces ActiveTrace="Chassis Velocity X">
+                <Trace Id="Chassis Velocity X" DisplayUnit="m/s" DisplayDPS="2" Visible="1"/>
+              </Traces>
+            </Graph>
+            <Graph Name="Group 2" ScaleMode="1" ScaleMin="-10" ScaleMax="10">
+              <Edges Mode="0" TopEdge="332" BottomEdge="664"/>
+              <Edges Mode="1" TopEdge="0" BottomEdge="1000"/>
+              <Lines>
+                <Line Index="0" Enabled="1" Value="0" Color="210,210,210"/>
+                <Line Index="1" Enabled="0" Value="0" Color="0,0,248"/>
+                <Line Index="2" Enabled="0" Value="0" Color="248,0,0"/>
+              </Lines>
+              <Traces ActiveTrace="Chassis Velocity Y">
+                <Trace Id="Chassis Velocity Y" DisplayUnit="m/s" DisplayDPS="2" Visible="1"/>
+              </Traces>
+            </Graph>
+            <Graph Name="Group 3" ScaleMode="1" ScaleMin="-10" ScaleMax="10">
+              <Edges Mode="0" TopEdge="664" BottomEdge="1000"/>
+              <Edges Mode="1" TopEdge="0" BottomEdge="1000"/>
+              <Lines>
+                <Line Index="0" Enabled="1" Value="0" Color="210,210,210"/>
+                <Line Index="1" Enabled="0" Value="0" Color="0,0,248"/>
+                <Line Index="2" Enabled="0" Value="0" Color="248,0,0"/>
+              </Lines>
+              <Traces ActiveTrace="Chassis Velocity Z">
+                <Trace Id="Chassis Velocity Z" DisplayUnit="m/s" DisplayDPS="2" Visible="1"/>
+              </Traces>
+            </Graph>
+          </Graphs>
+          <Cursor Version="1" Type="1" Snap="1"/>
+        </Control>
+      </Controls>
+    </Worksheet>
+    <Worksheet Name="Rotation" LinkTo="Laps" DataMode="1" ShowCursorValues="1" GridSize="100,100" LockByGPSTime="0">
+      <Controls ActiveControl="Copy (1) of Copy (1) of Time/Distance [2]">
+        <Control Id="MoTeC.TimeDistance" Name="Copy (1) of Copy (1) of Time/Distance [2]" Caption="Driver Inputs" AutoCaption="0" Supports="0" RectGridPts="0,0,100,31" DisplayTitleBar="0" LinkTo="Laps" LinkZoom="1" ModeId="0" ShowDataLegend="1" Version="2" TraceLineWidth="1" TracePointSize="3" TraceStyle="0" LinkCursor="1" LinkDatum="1" ShowKeyValues="1" ShowKeyStats="1" KeyMode="0" KeyPos="1" ShowGridLines="1" ShowXAxis="1" ShowXAxisScrollBar="0" ShowYAxis="1" ShowYAxisScrollBar="1" ShowMarkers="1" ShowBands="1" BandGroup="Outings:Laps:Track Sections:Default" BandMode="1" OverlapMode="0" VariancePos="0.25" VarianceAutoScale="0" VarianceMin="-1" VarianceMax="1">
+          <Graphs ActivateChild="Group 1">
+            <Graph Name="Group 1" ScaleMode="1" ScaleMin="0" ScaleMax="130">
+              <Edges Mode="0" TopEdge="0" BottomEdge="499"/>
+              <Edges Mode="1" TopEdge="0" BottomEdge="1000"/>
+              <Lines>
+                <Line Index="0" Enabled="1" Value="0" Color="210,210,210"/>
+                <Line Index="1" Enabled="0" Value="0" Color="0,0,248"/>
+                <Line Index="2" Enabled="0" Value="0" Color="248,0,0"/>
+              </Lines>
+              <Traces ActiveTrace="Throttle Pos">
+                <Trace Id="Throttle Pos" DisplayUnit="%" DisplayDPS="1" Visible="1"/>
+                <Trace Id="Brake Pos" DisplayUnit="%" DisplayDPS="1" Visible="1"/>
+              </Traces>
+            </Graph>
+            <Graph Name="Group 3" ScaleMode="1" ScaleMin="-300" ScaleMax="300">
+              <Edges Mode="0" TopEdge="499" BottomEdge="1000"/>
+              <Edges Mode="1" TopEdge="0" BottomEdge="1000"/>
+              <Lines>
+                <Line Index="0" Enabled="1" Value="0" Color="210,210,210"/>
+                <Line Index="1" Enabled="0" Value="0" Color="0,0,248"/>
+                <Line Index="2" Enabled="0" Value="0" Color="248,0,0"/>
+              </Lines>
+              <Traces ActiveTrace="Steering Angle">
+                <Trace Id="Steering Angle" DisplayUnit="deg" DisplayDPS="1" Visible="1"/>
+              </Traces>
+            </Graph>
+          </Graphs>
+          <Cursor Version="1" Type="1" Snap="1"/>
+        </Control>
+        <Control Id="MoTeC.TimeDistance" Name="Copy (1) of Time/Distance [1]" Caption="CG Accel" AutoCaption="0" Supports="0" RectGridPts="0,31,51,100" DisplayTitleBar="0" LinkTo="Laps" LinkZoom="1" ModeId="0" ShowDataLegend="1" Version="2" TraceLineWidth="1" TracePointSize="3" TraceStyle="0" LinkCursor="1" LinkDatum="1" ShowKeyValues="1" ShowKeyStats="1" KeyMode="0" KeyPos="1" ShowGridLines="1" ShowXAxis="1" ShowXAxisScrollBar="0" ShowYAxis="1" ShowYAxisScrollBar="1" ShowMarkers="1" ShowBands="1" BandGroup="Outings:Laps:Track Sections:Default" BandMode="1" OverlapMode="0" VariancePos="0.25" VarianceAutoScale="1">
+          <Graphs ActivateChild="Group 2">
+            <Graph Name="Group 1" ScaleMode="1" ScaleMin="-5" ScaleMax="5">
+              <Edges Mode="0" TopEdge="0" BottomEdge="500"/>
+              <Edges Mode="1" TopEdge="0" BottomEdge="1000"/>
+              <Lines>
+                <Line Index="0" Enabled="1" Value="0" Color="210,210,210"/>
+                <Line Index="1" Enabled="0" Value="0" Color="0,0,248"/>
+                <Line Index="2" Enabled="0" Value="0" Color="248,0,0"/>
+              </Lines>
+              <Traces ActiveTrace="Chassis Pitch Angle">
+                <Trace Id="Chassis Pitch Angle" DisplayUnit="deg" DisplayDPS="2" Visible="1"/>
+              </Traces>
+            </Graph>
+            <Graph Name="Group 2" ScaleMode="1" ScaleMin="-5" ScaleMax="5">
+              <Edges Mode="0" TopEdge="500" BottomEdge="1000"/>
+              <Edges Mode="1" TopEdge="0" BottomEdge="1000"/>
+              <Lines>
+                <Line Index="0" Enabled="1" Value="0" Color="210,210,210"/>
+                <Line Index="1" Enabled="0" Value="0" Color="0,0,248"/>
+                <Line Index="2" Enabled="0" Value="0" Color="248,0,0"/>
+              </Lines>
+              <Traces ActiveTrace="Chassis Roll Angle">
+                <Trace Id="Chassis Roll Angle" DisplayUnit="deg" DisplayDPS="2" Visible="1"/>
+              </Traces>
+            </Graph>
+          </Graphs>
+          <Cursor Version="1" Type="1" Snap="1"/>
+        </Control>
+        <Control Id="MoTeC.TimeDistance" Name="Copy (2) of Time/Distance [1]" Caption="CG Accel" AutoCaption="0" Supports="0" RectGridPts="51,31,100,100" DisplayTitleBar="0" LinkTo="Laps" LinkZoom="1" ModeId="0" ShowDataLegend="1" Version="2" TraceLineWidth="1" TracePointSize="3" TraceStyle="0" LinkCursor="1" LinkDatum="1" ShowKeyValues="1" ShowKeyStats="1" KeyMode="0" KeyPos="1" ShowGridLines="1" ShowXAxis="1" ShowXAxisScrollBar="0" ShowYAxis="1" ShowYAxisScrollBar="1" ShowMarkers="1" ShowBands="1" BandGroup="Outings:Laps:Track Sections:Default" BandMode="1" OverlapMode="0" VariancePos="0.25" VarianceAutoScale="1">
+          <Graphs ActivateChild="Group 3">
+            <Graph Name="Group 1" ScaleMode="1" ScaleMin="-20" ScaleMax="20">
+              <Edges Mode="0" TopEdge="0" BottomEdge="332"/>
+              <Edges Mode="1" TopEdge="0" BottomEdge="1000"/>
+              <Lines>
+                <Line Index="0" Enabled="1" Value="0" Color="210,210,210"/>
+                <Line Index="1" Enabled="0" Value="0" Color="0,0,248"/>
+                <Line Index="2" Enabled="0" Value="0" Color="248,0,0"/>
+              </Lines>
+              <Traces ActiveTrace="Chassis Pitch Rate">
+                <Trace Id="Chassis Pitch Rate" DisplayUnit="deg/s" DisplayDPS="2" Visible="1"/>
+              </Traces>
+            </Graph>
+            <Graph Name="Group 2" ScaleMode="1" ScaleMin="-20" ScaleMax="20">
+              <Edges Mode="0" TopEdge="332" BottomEdge="664"/>
+              <Edges Mode="1" TopEdge="0" BottomEdge="1000"/>
+              <Lines>
+                <Line Index="0" Enabled="1" Value="0" Color="210,210,210"/>
+                <Line Index="1" Enabled="0" Value="0" Color="0,0,248"/>
+                <Line Index="2" Enabled="0" Value="0" Color="248,0,0"/>
+              </Lines>
+              <Traces ActiveTrace="Chassis Roll Rate">
+                <Trace Id="Chassis Roll Rate" DisplayUnit="deg/s" DisplayDPS="2" Visible="1"/>
+              </Traces>
+            </Graph>
+            <Graph Name="Group 3" ScaleMode="1" ScaleMin="-50" ScaleMax="50">
+              <Edges Mode="0" TopEdge="664" BottomEdge="1000"/>
+              <Edges Mode="1" TopEdge="0" BottomEdge="1000"/>
+              <Lines>
+                <Line Index="0" Enabled="1" Value="0" Color="210,210,210"/>
+                <Line Index="1" Enabled="0" Value="0" Color="0,0,248"/>
+                <Line Index="2" Enabled="0" Value="0" Color="248,0,0"/>
+              </Lines>
+              <Traces ActiveTrace="Chassis Yaw Rate">
+                <Trace Id="Chassis Yaw Rate" DisplayUnit="deg/s" DisplayDPS="2" Visible="1"/>
+              </Traces>
+            </Graph>
+          </Graphs>
+          <Cursor Version="1" Type="1" Snap="1"/>
+        </Control>
+      </Controls>
+    </Worksheet>
+    <Worksheet Name="Damage" LinkTo="Laps" DataMode="1" ShowCursorValues="1" GridSize="100,100" LockByGPSTime="0">
+      <Controls ActiveControl="Copy (1) of Copy (1) of Time/Distance [2]">
+        <Control Id="MoTeC.TimeDistance" Name="Copy (1) of Copy (1) of Time/Distance [2]" Caption="Driver Inputs" AutoCaption="0" Supports="0" RectGridPts="0,0,100,31" DisplayTitleBar="0" LinkTo="Laps" LinkZoom="1" ModeId="0" ShowDataLegend="1" Version="2" TraceLineWidth="1" TracePointSize="3" TraceStyle="0" LinkCursor="1" LinkDatum="1" ShowKeyValues="1" ShowKeyStats="1" KeyMode="0" KeyPos="1" ShowGridLines="1" ShowXAxis="1" ShowXAxisScrollBar="0" ShowYAxis="1" ShowYAxisScrollBar="1" ShowMarkers="1" ShowBands="1" BandGroup="Outings:Laps:Track Sections:Default" BandMode="1" OverlapMode="0" VariancePos="0.25" VarianceAutoScale="0" VarianceMin="-1" VarianceMax="1">
+          <Graphs ActivateChild="Group 1">
+            <Graph Name="Group 1" ScaleMode="1" ScaleMin="0" ScaleMax="130">
+              <Edges Mode="0" TopEdge="0" BottomEdge="499"/>
+              <Edges Mode="1" TopEdge="0" BottomEdge="1000"/>
+              <Lines>
+                <Line Index="0" Enabled="1" Value="0" Color="210,210,210"/>
+                <Line Index="1" Enabled="0" Value="0" Color="0,0,248"/>
+                <Line Index="2" Enabled="0" Value="0" Color="248,0,0"/>
+              </Lines>
+              <Traces ActiveTrace="Throttle Pos">
+                <Trace Id="Throttle Pos" DisplayUnit="%" DisplayDPS="1" Visible="1"/>
+                <Trace Id="Brake Pos" DisplayUnit="%" DisplayDPS="1" Visible="1"/>
+              </Traces>
+            </Graph>
+            <Graph Name="Group 3" ScaleMode="1" ScaleMin="-300" ScaleMax="300">
+              <Edges Mode="0" TopEdge="499" BottomEdge="1000"/>
+              <Edges Mode="1" TopEdge="0" BottomEdge="1000"/>
+              <Lines>
+                <Line Index="0" Enabled="1" Value="0" Color="210,210,210"/>
+                <Line Index="1" Enabled="0" Value="0" Color="0,0,248"/>
+                <Line Index="2" Enabled="0" Value="0" Color="248,0,0"/>
+              </Lines>
+              <Traces ActiveTrace="Steering Angle">
+                <Trace Id="Steering Angle" DisplayUnit="deg" DisplayDPS="1" Visible="1"/>
+              </Traces>
+            </Graph>
+          </Graphs>
+          <Cursor Version="1" Type="1" Snap="1"/>
+        </Control>
+        <Control Id="MoTeC.TimeDistance" Name="Copy (1) of Time/Distance [1]" AutoCaption="0" Supports="0" RectGridPts="0,31,51,100" DisplayTitleBar="0" LinkTo="Laps" LinkZoom="1" ModeId="0" ShowDataLegend="1" Version="2" TraceLineWidth="1" TracePointSize="3" TraceStyle="0" LinkCursor="1" LinkDatum="1" ShowKeyValues="1" ShowKeyStats="1" KeyMode="0" KeyPos="1" ShowGridLines="1" ShowXAxis="1" ShowXAxisScrollBar="0" ShowYAxis="1" ShowYAxisScrollBar="1" ShowMarkers="1" ShowBands="1" BandGroup="Outings:Laps:Track Sections:Default" BandMode="1" OverlapMode="0" VariancePos="0.25" VarianceAutoScale="1">
+          <Graphs ActivateChild="Group 2">
+            <Graph Name="Group 1" ScaleMode="1" ScaleMin="0" ScaleMax="90">
+              <Edges Mode="0" TopEdge="0" BottomEdge="500"/>
+              <Edges Mode="1" TopEdge="0" BottomEdge="1000"/>
+              <Lines>
+                <Line Index="0" Enabled="1" Value="0" Color="210,210,210"/>
+                <Line Index="1" Enabled="0" Value="0" Color="0,0,248"/>
+                <Line Index="2" Enabled="0" Value="0" Color="248,0,0"/>
+              </Lines>
+              <Traces ActiveTrace="Car Damage Front">
+                <Trace Id="Car Damage Front" DisplayUnit="" DisplayDPS="2" Visible="1"/>
+              </Traces>
+            </Graph>
+            <Graph Name="Group 2" ScaleMode="1" ScaleMin="0" ScaleMax="90">
+              <Edges Mode="0" TopEdge="500" BottomEdge="1000"/>
+              <Edges Mode="1" TopEdge="0" BottomEdge="1000"/>
+              <Lines>
+                <Line Index="0" Enabled="1" Value="0" Color="210,210,210"/>
+                <Line Index="1" Enabled="0" Value="0" Color="0,0,248"/>
+                <Line Index="2" Enabled="0" Value="0" Color="248,0,0"/>
+              </Lines>
+              <Traces ActiveTrace="Car Damage Rear">
+                <Trace Id="Car Damage Rear" DisplayUnit="" DisplayDPS="2" Visible="1"/>
+              </Traces>
+            </Graph>
+          </Graphs>
+          <Cursor Version="1" Type="1" Snap="1"/>
+        </Control>
+        <Control Id="MoTeC.TimeDistance" Name="Copy (1) of Time/Distance [2]" AutoCaption="0" Supports="0" RectGridPts="51,31,100,100" DisplayTitleBar="0" LinkTo="Laps" LinkZoom="1" ModeId="0" ShowDataLegend="1" Version="2" TraceLineWidth="1" TracePointSize="3" TraceStyle="0" LinkCursor="1" LinkDatum="1" ShowKeyValues="1" ShowKeyStats="1" KeyMode="0" KeyPos="1" ShowGridLines="1" ShowXAxis="1" ShowXAxisScrollBar="0" ShowYAxis="1" ShowYAxisScrollBar="1" ShowMarkers="1" ShowBands="1" BandGroup="Outings:Laps:Track Sections:Default" BandMode="1" OverlapMode="0" VariancePos="0.25" VarianceAutoScale="1">
+          <Graphs ActivateChild="Group 2">
+            <Graph Name="Group 1" ScaleMode="1" ScaleMin="0" ScaleMax="90">
+              <Edges Mode="0" TopEdge="0" BottomEdge="500"/>
+              <Edges Mode="1" TopEdge="0" BottomEdge="1000"/>
+              <Lines>
+                <Line Index="0" Enabled="1" Value="0" Color="210,210,210"/>
+                <Line Index="1" Enabled="0" Value="0" Color="0,0,248"/>
+                <Line Index="2" Enabled="0" Value="0" Color="248,0,0"/>
+              </Lines>
+              <Traces ActiveTrace="Car Damage Left">
+                <Trace Id="Car Damage Left" DisplayUnit="" DisplayDPS="2" Visible="1"/>
+              </Traces>
+            </Graph>
+            <Graph Name="Group 2" ScaleMode="1" ScaleMin="0" ScaleMax="90">
+              <Edges Mode="0" TopEdge="500" BottomEdge="1000"/>
+              <Edges Mode="1" TopEdge="0" BottomEdge="1000"/>
+              <Lines>
+                <Line Index="0" Enabled="1" Value="0" Color="210,210,210"/>
+                <Line Index="1" Enabled="0" Value="0" Color="0,0,248"/>
+                <Line Index="2" Enabled="0" Value="0" Color="248,0,0"/>
+              </Lines>
+              <Traces ActiveTrace="Car Damage Right">
+                <Trace Id="Car Damage Right" DisplayUnit="" DisplayDPS="2" Visible="1"/>
+              </Traces>
+            </Graph>
+          </Graphs>
+          <Cursor Version="1" Type="1" Snap="1"/>
+        </Control>
+      </Controls>
+    </Worksheet>
+  </Worksheets>
+</Workbook>

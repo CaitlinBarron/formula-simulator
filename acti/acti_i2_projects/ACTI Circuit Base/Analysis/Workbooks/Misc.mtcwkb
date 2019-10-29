@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<Workbook Locale="English_United States.1252" Version="101" Profile="Circuit">
+  <Worksheets ActiveChild="Data Acquisition">
+    <Worksheet Name="Data Acquisition" LinkTo="Laps" DataMode="0" ShowCursorValues="1" GridSize="100,100" LockByGPSTime="0">
+      <Controls ActiveControl="Time/Distance [1]">
+        <Control Id="MoTeC.Histogram" Name="Histogram [1]" AutoCaption="0" Supports="0" RectGridPts="52,0,100,100" DisplayTitleBar="0" LinkTo="Laps" LinkZoom="1" ModeId="0" ShowDataLegend="1" ShowColorLegend="1" ActiveTrace="0" TileMode="1" TileActiveChan="1" TileAutoCols="1" TileCols="1" Version="1" SecondChannel="" XScaleMode="1" XSecondScaleMode="0" YUnitMode="1" YScaleMode="0" YScale="100" YAllowOverrides="0" YExcludeUntrusted="0" Style="1" BinLabelStep="-1" UseColors="0" InvertColors="0" StackLines="0" ShowColorBinSamples="1">
+          <HistoTrace Id="Raw Data Sample Rate" Visible="1"/>
+          <HistoMainBins>
+            <EvenWidthBandAxis PaletteMode="1" GradientMode="1" BandChanColor="0,0,0" AxisChanColor="0,0,0" Color1="64,64,255" Color2="255,64,64" ReversGradient="0" CentredBands="1" GreaterMaxBand="1" LessMinBand="1" BandMode="0" DataMin="0" DataMax="200" BandWidth="5" BandCount="41">
+              <ColorBand Flags="2" Min="-2.5" Max="-2.5" Color="64,64,255" Visible="1"/>
+              <ColorBand Flags="7" Min="-2.5" Max="2.5" Color="64,83,255" Visible="1"/>
+              <ColorBand Flags="7" Min="2.5" Max="7.5" Color="64,102,255" Visible="1"/>
+              <ColorBand Flags="7" Min="7.5" Max="12.5" Color="64,117,255" Visible="1"/>
+              <ColorBand Flags="7" Min="12.5" Max="17.5" Color="64,136,255" Visible="1"/>
+              <ColorBand Flags="7" Min="17.5" Max="22.5" Color="64,155,255" Visible="1"/>
+              <ColorBand Flags="7" Min="22.5" Max="27.5" Color="64,174,255" Visible="1"/>
+              <ColorBand Flags="7" Min="27.5" Max="32.5" Color="64,193,255" Visible="1"/>
+              <ColorBand Flags="7" Min="32.5" Max="37.5" Color="64,207,255" Visible="1"/>
+              <ColorBand Flags="7" Min="37.5" Max="42.5" Color="64,226,255" Visible="1"/>
+              <ColorBand Flags="7" Min="42.5" Max="47.5" Color="64,245,255" Visible="1"/>
+              <ColorBand Flags="7" Min="47.5" Max="52.5" Color="64,255,245" Visible="1"/>
+              <ColorBand Flags="7" Min="52.5" Max="57.5" Color="64,255,226" Visible="1"/>
+              <ColorBand Flags="7" Min="57.5" Max="62.5" Color="64,255,207" Visible="1"/>
+              <ColorBand Flags="7" Min="62.5" Max="67.5" Color="64,255,193" Visible="1"/>
+              <ColorBand Flags="7" Min="67.5" Max="72.5" Color="64,255,174" Visible="1"/>
+              <ColorBand Flags="7" Min="72.5" Max="77.5" Color="64,255,155" Visible="1"/>
+              <ColorBand Flags="7" Min="77.5" Max="82.5" Color="64,255,136" Visible="1"/>
+              <ColorBand Flags="7" Min="82.5" Max="87.5" Color="64,255,117" Visible="1"/>
+              <ColorBand Flags="7" Min="87.5" Max="92.5" Color="64,255,102" Visible="1"/>
+              <ColorBand Flags="7" Min="92.5" Max="97.5" Color="64,255,83" Visible="1"/>
+              <ColorBand Flags="7" Min="97.5" Max="102.5" Color="64,255,64" Visible="1"/>
+              <ColorBand Flags="7" Min="102.5" Max="107.5" Color="83,255,64" Visible="1"/>
+              <ColorBand Flags="7" Min="107.5" Max="112.5" Color="102,255,64" Visible="1"/>
+              <ColorBand Flags="7" Min="112.5" Max="117.5" Color="117,255,64" Visible="1"/>
+              <ColorBand Flags="7" Min="117.5" Max="122.5" Color="136,255,64" Visible="1"/>
+              <ColorBand Flags="7" Min="122.5" Max="127.5" Color="155,255,64" Visible="1"/>
+              <ColorBand Flags="7" Min="127.5" Max="132.5" Color="174,255,64" Visible="1"/>
+              <ColorBand Flags="7" Min="132.5" Max="137.5" Color="193,255,64" Visible="1"/>
+              <ColorBand Flags="7" Min="137.5" Max="142.5" Color="207,255,64" Visible="1"/>
+              <ColorBand Flags="7" Min="142.5" Max="147.5" Color="226,255,64" Visible="1"/>
+              <ColorBand Flags="7" Min="147.5" Max="152.5" Color="245,255,64" Visible="1"/>
+              <ColorBand Flags="7" Min="152.5" Max="157.5" Color="255,245,64" Visible="1"/>
+              <ColorBand Flags="7" Min="157.5" Max="162.5" Color="255,226,64" Visible="1"/>
+              <ColorBand Flags="7" Min="162.5" Max="167.5" Color="255,207,64" Visible="1"/>
+              <ColorBand Flags="7" Min="167.5" Max="172.5" Color="255,193,64" Visible="1"/>
+              <ColorBand Flags="7" Min="172.5" Max="177.5" Color="255,174,64" Visible="1"/>
+              <ColorBand Flags="7" Min="177.5" Max="182.5" Color="255,155,64" Visible="1"/>
+              <ColorBand Flags="7" Min="182.5" Max="187.5" Color="255,136,64" Visible="1"/>
+              <ColorBand Flags="7" Min="187.5" Max="192.5" Color="255,117,64" Visible="1"/>
+              <ColorBand Flags="7" Min="192.5" Max="197.5" Color="255,102,64" Visible="1"/>
+              <ColorBand Flags="15" Min="197.5" Max="202.5" Color="255,83,64" Visible="1"/>
+              <ColorBand Flags="1" Min="202.5" Max="202.5" Color="255,64,64" Visible="1"/>
+            </EvenWidthBandAxis>
+          </HistoMainBins>
+          <HistoColorBands>
+            <EvenWidthBandAxis PaletteMode="1" GradientMode="1" BandChanColor="0,0,0" AxisChanColor="255,160,32" Color1="64,64,255" Color2="255,64,64" ReversGradient="0" CentredBands="0" GreaterMaxBand="1" LessMinBand="1" BandMode="1" DataMin="0" DataMax="0" BandWidth="0" BandCount="10"/>
+          </HistoColorBands>
+        </Control>
+        <Control Id="MoTeC.TimeDistance" Name="Time/Distance [1]" AutoCaption="0" Supports="0" RectGridPts="0,0,52,100" DisplayTitleBar="0" LinkTo="Laps" LinkZoom="1" ModeId="0" ShowDataLegend="1" Version="2" TraceLineWidth="1" TracePointSize="3" TraceStyle="0" LinkCursor="1" LinkDatum="1" ShowKeyValues="1" ShowKeyStats="1" KeyMode="0" KeyPos="1" ShowGridLines="1" ShowXAxis="1" ShowXAxisScrollBar="0" ShowYAxis="1" ShowYAxisScrollBar="1" ShowMarkers="1" ShowBands="1" BandGroup="Outings:Laps:Track Sections:Default" BandMode="1" OverlapMode="0" VariancePos="0.25" VarianceAutoScale="1">
+          <Graphs ActivateChild="Group 1">
+            <Graph Name="Group 1" ScaleMode="1" ScaleMin="10" ScaleMax="150">
+              <Edges Mode="0" TopEdge="0" BottomEdge="500"/>
+              <Edges Mode="1" TopEdge="0" BottomEdge="1000"/>
+              <Lines>
+                <Line Index="0" Enabled="1" Value="0" Color="210,210,210"/>
+                <Line Index="1" Enabled="0" Value="0" Color="0,0,248"/>
+                <Line Index="2" Enabled="0" Value="0" Color="248,0,0"/>
+              </Lines>
+              <Traces ActiveTrace="Raw Data Sample Rate">
+                <Trace Id="Raw Data Sample Rate" DisplayUnit="Hz" DisplayDPS="1" Visible="1"/>
+              </Traces>
+            </Graph>
+            <Graph Name="Group 2" ScaleMode="1" ScaleMin="0" ScaleMax="1.05">
+              <Edges Mode="0" TopEdge="500" BottomEdge="1000"/>
+              <Edges Mode="1" TopEdge="0" BottomEdge="1000"/>
+              <Lines>
+                <Line Index="0" Enabled="1" Value="0" Color="210,210,210"/>
+                <Line Index="1" Enabled="0" Value="0" Color="0,0,248"/>
+                <Line Index="2" Enabled="0" Value="0" Color="248,0,0"/>
+              </Lines>
+              <Traces ActiveTrace="HR Sample Clock">
+                <Trace Id="HR Sample Clock" DisplayUnit="" DisplayDPS="0" Visible="1"/>
+                <Trace Id="MR Sample Clock" DisplayUnit="" DisplayDPS="0" Visible="1"/>
+                <Trace Id="LR Sample Clock" DisplayUnit="" DisplayDPS="0" Visible="1"/>
+              </Traces>
+            </Graph>
+          </Graphs>
+          <Cursor Version="1" Type="1" Snap="1"/>
+        </Control>
+      </Controls>
+    </Worksheet>
+  </Worksheets>
+</Workbook>

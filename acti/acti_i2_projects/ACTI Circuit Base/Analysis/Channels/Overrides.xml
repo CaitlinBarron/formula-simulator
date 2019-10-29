@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Descriptors Version="10" Locale="English" Flags="7">
+  <Descriptor Id="ABS Active" AnalysisInterpolationMode="0" DisplayColorIndex="6" DisplayDPS="0"/>
+  <Descriptor Id="ABS Enabled" AnalysisInterpolationMode="0" DisplayColorIndex="5"/>
+  <Descriptor Id="AID Allow Tire Blankets" DisplayColorIndex="1" AnalysisInterpolationMode="0"/>
+  <Descriptor Id="AID Auto Blip" DisplayColorIndex="6" AnalysisInterpolationMode="0"/>
+  <Descriptor Id="AID Auto Clutch" DisplayColorIndex="7" AnalysisInterpolationMode="0"/>
+  <Descriptor Id="AID Auto Shift" DisplayColorIndex="4" AnalysisInterpolationMode="0"/>
+  <Descriptor Id="AID Fuel Rate" DisplayColorIndex="7" AnalysisInterpolationMode="0"/>
+  <Descriptor Id="AID Ideal Line" DisplayColorIndex="0" AnalysisInterpolationMode="0"/>
+  <Descriptor Id="AID Mech Damage" AnalysisInterpolationMode="0"/>
+  <Descriptor Id="AID Stability" DisplayColorIndex="2" AnalysisInterpolationMode="0"/>
+  <Descriptor Id="AID Tire Wear Rate" DisplayColorIndex="1" AnalysisInterpolationMode="0"/>
+  <Descriptor Id="Air Density" DisplayColorIndex="3" DisplayDPS="3" AnalysisInterpolationMode="3"/>
+  <Descriptor Id="Air Temp" DisplayColorIndex="2" DisplayDPS="1"/>
+  <Descriptor Id="Air Temp Inlet" DisplayMax="332.149994" DisplayMin="272.149994"/>
+  <Descriptor Id="Ballast" DisplayColorIndex="1" DisplayDPS="1"/>
+  <Descriptor Id="Bat Volts ADL" DisplayMax="15.000000" DisplayMin="10.000000"/>
+  <Descriptor Id="Best Lap Delta" DisplayColorIndex="7" AnalysisInterpolationMode="3"/>
+  <Descriptor Id="Best Lap Time" DisplayColorIndex="2" DisplayDPS="3" AnalysisInterpolationMode="3"/>
+  <Descriptor Id="Brake Bias" DisplayColorIndex="4" DisplayDPS="1"/>
+  <Descriptor Id="Brake Pos" DisplayColorIndex="0" DisplayDPS="1"/>
+  <Descriptor Id="Brake Temp FL" DisplayColorIndex="6" DisplayDPS="1"/>
+  <Descriptor Id="Brake Temp FR" DisplayColorIndex="0" DisplayDPS="1"/>
+  <Descriptor Id="Brake Temp RL" DisplayColorIndex="3" DisplayDPS="1"/>
+  <Descriptor Id="Brake Temp RR" DisplayColorIndex="4" DisplayDPS="1"/>
+  <Descriptor Id="Camber FL" DisplayColorIndex="6" DisplayDPS="2"/>
+  <Descriptor Id="Camber FR" DisplayColorIndex="0" DisplayDPS="2"/>
+  <Descriptor Id="Camber RL" DisplayColorIndex="3" DisplayDPS="2"/>
+  <Descriptor Id="Camber RR" DisplayColorIndex="4" DisplayDPS="2"/>
+  <Descriptor Id="Car Coord X" DisplayColorIndex="0"/>
+  <Descriptor Id="Car Coord Y" DisplayColorIndex="4"/>
+  <Descriptor Id="Car Coord Z" DisplayColorIndex="2" DisplayDPS="1"/>
+  <Descriptor Id="Car Damage Front" DisplayColorIndex="0" DisplayDPS="2" AnalysisInterpolationMode="3"/>
+  <Descriptor Id="Car Damage Left" DisplayColorIndex="6" DisplayDPS="2" AnalysisInterpolationMode="3"/>
+  <Descriptor Id="Car Damage Rear" DisplayColorIndex="4" DisplayDPS="2" AnalysisInterpolationMode="3"/>
+  <Descriptor Id="Car Damage Right" DisplayDPS="2" AnalysisInterpolationMode="3"/>
+  <Descriptor Id="Car Pitch Angle" DisplayColorIndex="4" DisplayDPS="2"/>
+  <Descriptor Id="Car Pos Norm" AnalysisInterpolationMode="3" DisplayColorIndex="0" DisplayDPS="2"/>
+  <Descriptor Id="Car Position Normalized" AnalysisInterpolationMode="3"/>
+  <Descriptor Id="Caster FL" DisplayColorIndex="6" DisplayDPS="2"/>
+  <Descriptor Id="Caster FR" DisplayColorIndex="0" DisplayDPS="2"/>
+  <Descriptor Id="CG Accel Lateral" AnalysisInterpolationMode="3" DisplayColorIndex="4" DisplayDPS="2"/>
+  <Descriptor Id="CG Accel Longitudinal" AnalysisInterpolationMode="3" DisplayColorIndex="0" DisplayDPS="2"/>
+  <Descriptor Id="CG Accel Vertical" AnalysisInterpolationMode="3" DisplayColorIndex="2" DisplayDPS="2"/>
+  <Descriptor Id="CG Height" DisplayColorIndex="1" DisplayDPS="1"/>
+  <Descriptor Id="Chassis Pitch Angle" DisplayColorIndex="0" DisplayDPS="2"/>
+  <Descriptor Id="Chassis Pitch Rate" DisplayColorIndex="0" DisplayDPS="2"/>
+  <Descriptor Id="Chassis Roll Angle" DisplayDPS="2"/>
+  <Descriptor Id="Chassis Roll Rate" DisplayColorIndex="4" DisplayDPS="2"/>
+  <Descriptor Id="Chassis Velocity X" DisplayColorIndex="0" DisplayDPS="2"/>
+  <Descriptor Id="Chassis Velocity Y" DisplayColorIndex="4" DisplayDPS="2"/>
+  <Descriptor Id="Chassis Velocity Z" DisplayColorIndex="2" DisplayDPS="2"/>
+  <Descriptor Id="Chassis Yaw Rate" DisplayColorIndex="2"/>
+  <Descriptor Id="Clutch Pos" DisplayColorIndex="7" DisplayDPS="1"/>
+  <Descriptor Id="Corr Dist" DisplayDPS="1"/>
+  <Descriptor Id="Corr Speed" DisplayColorIndex="2"/>
+  <Descriptor Id="Data Sampling Rate" AnalysisInterpolationMode="0" DisplayDPS="2"/>
+  <Descriptor Id="Drive Train Speed" DisplayColorIndex="6"/>
+  <Descriptor Id="DRS Active" DisplayColorIndex="0" DisplayDPS="0" AnalysisInterpolationMode="0"/>
+  <Descriptor Id="DRS Available" DisplayColorIndex="4" DisplayDPS="0" AnalysisInterpolationMode="0"/>
+  <Descriptor Id="Eng Oil Pres" DisplayMax="600000.000000" DisplayMin="0.000000"/>
+  <Descriptor Id="Eng Oil Temp" DisplayMax="382.149994" DisplayMin="272.149994"/>
+  <Descriptor Id="Engine Brake Setting" DisplayColorIndex="1" AnalysisInterpolationMode="0"/>
+  <Descriptor Id="Engine Limiter" AnalysisInterpolationMode="0" DisplayDPS="0"/>
+  <Descriptor Id="Engine RPM" AnalysisInterpolationMode="3" DisplayDPS="0"/>
+  <Descriptor Id="Engine Temp" DisplayMax="382.149994" DisplayMin="272.149994"/>
+  <Descriptor Id="ERS Heat Charging" DisplayColorIndex="0" AnalysisInterpolationMode="0"/>
+  <Descriptor Id="ERS Is Charging" DisplayColorIndex="4" DisplayDPS="0" AnalysisInterpolationMode="0"/>
+  <Descriptor Id="ERS Max Energy" DisplayColorIndex="1" DisplayDPS="1" AnalysisInterpolationMode="3"/>
+  <Descriptor Id="ERS Power Level" DisplayColorIndex="3" AnalysisInterpolationMode="0"/>
+  <Descriptor Id="ERS Recovery Level" DisplayColorIndex="6" AnalysisInterpolationMode="0"/>
+  <Descriptor Id="Flags" DisplayColorIndex="7" AnalysisInterpolationMode="0"/>
+  <Descriptor Id="Fuel Level" DisplayDPS="2"/>
+  <Descriptor Id="Fuel Pres" DisplayMax="600000.000000" DisplayMin="0.000000"/>
+  <Descriptor Id="G Force Lat" DisplayMax="19.613304" DisplayMin="-19.613304"/>
+  <Descriptor Id="G Force Long" DisplayMax="14.709978" DisplayMin="-14.709978"/>
+  <Descriptor Id="Gear" AnalysisInterpolationMode="0" DisplayColorIndex="4" DisplayDPS="0"/>
+  <Descriptor Id="GPS Latitude" DisplayDPS="15"/>
+  <Descriptor Id="GPS Longitude" DisplayDPS="15"/>
+  <Descriptor Id="Ground Speed" DisplayColorIndex="1" DisplayDPS="1"/>
+  <Descriptor Id="HR Sample Clock" DisplayDPS="0" AnalysisInterpolationMode="0"/>
+  <Descriptor Id="Ign Advance" DisplayMax="0.698132" DisplayMin="0.000000"/>
+  <Descriptor Id="In Pit" AnalysisInterpolationMode="0" DisplayColorIndex="4"/>
+  <Descriptor Id="Is In Pit" AnalysisInterpolationMode="0" DisplayColorIndex="4" DisplayDPS="0"/>
+  <Descriptor Id="KERS Charge" DisplayColorIndex="2" DisplayDPS="1"/>
+  <Descriptor Id="KERS Deployed Energy" DisplayColorIndex="0" DisplayDPS="1" AnalysisInterpolationMode="3"/>
+  <Descriptor Id="KERS Input" DisplayDPS="1"/>
+  <Descriptor Id="KERS Level" DisplayDPS="1"/>
+  <Descriptor Id="KERS Max Energy" DisplayColorIndex="4" DisplayDPS="1" AnalysisInterpolationMode="3"/>
+  <Descriptor Id="Lambda 1" DisplayMax="1.100000" DisplayMin="0.800000"/>
+  <Descriptor Id="Lambda 2" DisplayMax="1.100000" DisplayMin="0.800000"/>
+  <Descriptor Id="Lap Invalidated" DisplayColorIndex="0" AnalysisInterpolationMode="0"/>
+  <Descriptor Id="Lap Time" AnalysisInterpolationMode="3" DisplayColorIndex="3" DisplayDPS="3"/>
+  <Descriptor Id="Lap Time2" DisplayColorIndex="4" DisplayDPS="3" AnalysisInterpolationMode="3"/>
+  <Descriptor Id="Last Lap Time" DisplayColorIndex="7" DisplayDPS="3" AnalysisInterpolationMode="0"/>
+  <Descriptor Id="Last Sector Time" DisplayDPS="3" AnalysisInterpolationMode="0"/>
+  <Descriptor Id="LR Sample Clock" DisplayColorIndex="5" DisplayDPS="0" AnalysisInterpolationMode="0"/>
+  <Descriptor Id="Manifold Pres" DisplayMax="249999.984375" DisplayMin="0.000000"/>
+  <Descriptor Id="Max Fuel" DisplayColorIndex="5" DisplayDPS="2"/>
+  <Descriptor Id="Max Power" DisplayDPS="1"/>
+  <Descriptor Id="Max RPM" DisplayColorIndex="5"/>
+  <Descriptor Id="Max Sus Travel FL" DisplayColorIndex="5" DisplayDPS="1"/>
+  <Descriptor Id="Max Sus Travel FR" DisplayColorIndex="5" DisplayDPS="1"/>
+  <Descriptor Id="Max Sus Travel RL" DisplayColorIndex="5" DisplayDPS="1"/>
+  <Descriptor Id="Max Sus Travel RR" DisplayColorIndex="5" DisplayDPS="1"/>
+  <Descriptor Id="Max Torque" DisplayColorIndex="4" DisplayDPS="1"/>
+  <Descriptor Id="Max Turbo Boost" DisplayColorIndex="5" DisplayDPS="2" AnalysisInterpolationMode="3"/>
+  <Descriptor Id="MR Sample Clock" DisplayColorIndex="4" DisplayDPS="0" AnalysisInterpolationMode="0"/>
+  <Descriptor Id="Num Tires Off Track" DisplayColorIndex="0" DisplayDPS="0" AnalysisInterpolationMode="0"/>
+  <Descriptor Id="Oversteer" DisplayMax="0.104720" DisplayMin="-0.104720"/>
+  <Descriptor Id="Penalties Enabled" AnalysisInterpolationMode="0"/>
+  <Descriptor Id="Position" AnalysisInterpolationMode="0"/>
+  <Descriptor Id="Raw Data Sampl Rate" DisplayColorIndex="1" DisplayDPS="1"/>
+  <Descriptor Id="Raw Data Sample Rate" DisplayColorIndex="1" DisplayDPS="1"/>
+  <Descriptor Id="Raw Data Sampling Rate" AnalysisInterpolationMode="0" DisplayColorIndex="1"/>
+  <Descriptor Id="Ride Height (Calc) FL" DisplayDPS="1"/>
+  <Descriptor Id="Ride Height (Calc) FR" DisplayDPS="1"/>
+  <Descriptor Id="Ride Height (Calc) RL" DisplayDPS="1"/>
+  <Descriptor Id="Ride Height (Calc) RR" DisplayDPS="1"/>
+  <Descriptor Id="Ride Height FL" DisplayColorIndex="6" DisplayDPS="1"/>
+  <Descriptor Id="Ride Height FR" DisplayColorIndex="0" DisplayDPS="1"/>
+  <Descriptor Id="Ride Height RL" DisplayColorIndex="3" DisplayDPS="1"/>
+  <Descriptor Id="Ride Height RR" DisplayColorIndex="4" DisplayDPS="1"/>
+  <Descriptor Id="Road Temp" DisplayDPS="1"/>
+  <Descriptor Id="Sampl Clock" AnalysisInterpolationMode="0" DisplayColorIndex="2" DisplayDPS="0"/>
+  <Descriptor Id="Sampling Clock" AnalysisInterpolationMode="0" DisplayColorIndex="2" DisplayDPS="0"/>
+  <Descriptor Id="Self Align Torque FL" DisplayColorIndex="6"/>
+  <Descriptor Id="Self Align Torque FR" DisplayColorIndex="0"/>
+  <Descriptor Id="Self Align Torque RL" DisplayColorIndex="3"/>
+  <Descriptor Id="Self Align Torque RR" DisplayColorIndex="4"/>
+  <Descriptor Id="Session Lap Count" AnalysisInterpolationMode="0" DisplayColorIndex="1" DisplayDPS="0"/>
+  <Descriptor Id="Session Time Left" DisplayColorIndex="2" DisplayDPS="3" AnalysisInterpolationMode="3"/>
+  <Descriptor Id="Steered Angle" DisplayMax="0.174533" DisplayMin="-0.174533"/>
+  <Descriptor Id="Steering Angle" DisplayColorIndex="6" DisplayDPS="1"/>
+  <Descriptor Id="Surface Grip" DisplayColorIndex="5" DisplayDPS="1"/>
+  <Descriptor Id="Suspension Height FL" AnalysisInterpolationMode="3" DisplayColorIndex="6" DisplayDPS="1"/>
+  <Descriptor Id="Suspension Height FR" DisplayColorIndex="0" DisplayDPS="1"/>
+  <Descriptor Id="Suspension Height RL" DisplayColorIndex="3" DisplayDPS="1"/>
+  <Descriptor Id="Suspension Height RR" DisplayColorIndex="4" DisplayDPS="1"/>
+  <Descriptor Id="Suspension Travel FL" DisplayColorIndex="6" DisplayDPS="1"/>
+  <Descriptor Id="Suspension Travel FR" DisplayColorIndex="0" DisplayDPS="1"/>
+  <Descriptor Id="Suspension Travel RL" DisplayColorIndex="3" DisplayDPS="1"/>
+  <Descriptor Id="Suspension Travel RR" DisplayColorIndex="4" DisplayDPS="1"/>
+  <Descriptor Id="TC Active" AnalysisInterpolationMode="0" DisplayColorIndex="3" DisplayDPS="0"/>
+  <Descriptor Id="TC Enabled" AnalysisInterpolationMode="0" DisplayColorIndex="2" DisplayDPS="0"/>
+  <Descriptor Id="Throttle Pos" DisplayDPS="1"/>
+  <Descriptor Id="Tire Camber FL" DisplayColorIndex="6" DisplayDPS="2"/>
+  <Descriptor Id="Tire Camber FR" DisplayColorIndex="0" DisplayDPS="2"/>
+  <Descriptor Id="Tire Camber RL" DisplayColorIndex="3" DisplayDPS="2"/>
+  <Descriptor Id="Tire Camber RR" DisplayColorIndex="4" DisplayDPS="2"/>
+  <Descriptor Id="Tire Dirt Level FL" AnalysisInterpolationMode="3" DisplayColorIndex="6" DisplayDPS="2"/>
+  <Descriptor Id="Tire Dirt Level FR" AnalysisInterpolationMode="3" DisplayColorIndex="0" DisplayDPS="2"/>
+  <Descriptor Id="Tire Dirt Level RL" AnalysisInterpolationMode="3" DisplayColorIndex="3" DisplayDPS="2"/>
+  <Descriptor Id="Tire Dirt Level RR" AnalysisInterpolationMode="3" DisplayColorIndex="4" DisplayDPS="2"/>
+  <Descriptor Id="Tire Load FL" DisplayColorIndex="6" DisplayDPS="0"/>
+  <Descriptor Id="Tire Load FR" DisplayColorIndex="0" DisplayDPS="0"/>
+  <Descriptor Id="Tire Load RL" DisplayColorIndex="3" DisplayDPS="0"/>
+  <Descriptor Id="Tire Load RR" DisplayColorIndex="4" DisplayDPS="0"/>
+  <Descriptor Id="Tire Loaded Radius FL" DisplayColorIndex="6" DisplayDPS="1"/>
+  <Descriptor Id="Tire Loaded Radius FR" DisplayColorIndex="0" DisplayDPS="1"/>
+  <Descriptor Id="Tire Loaded Radius RL" DisplayColorIndex="3" DisplayDPS="1"/>
+  <Descriptor Id="Tire Loaded Radius RR" DisplayColorIndex="4" DisplayDPS="1"/>
+  <Descriptor Id="Tire Pressure FL" DisplayColorIndex="6" DisplayDPS="2"/>
+  <Descriptor Id="Tire Pressure FR" DisplayColorIndex="0" DisplayDPS="2"/>
+  <Descriptor Id="Tire Pressure RL" DisplayColorIndex="3" DisplayDPS="2"/>
+  <Descriptor Id="Tire Pressure RR" DisplayColorIndex="4" DisplayDPS="2"/>
+  <Descriptor Id="Tire Radius FL" DisplayColorIndex="2" DisplayDPS="1"/>
+  <Descriptor Id="Tire Radius FR" DisplayColorIndex="2" DisplayDPS="1"/>
+  <Descriptor Id="Tire Radius RL" DisplayColorIndex="2" DisplayDPS="1"/>
+  <Descriptor Id="Tire Radius RR" DisplayColorIndex="2" DisplayDPS="1"/>
+  <Descriptor Id="Tire Rubber Grip FL" DisplayColorIndex="6" DisplayDPS="2"/>
+  <Descriptor Id="Tire Rubber Grip FR" DisplayColorIndex="0" DisplayDPS="2"/>
+  <Descriptor Id="Tire Rubber Grip RL" DisplayColorIndex="3" DisplayDPS="2"/>
+  <Descriptor Id="Tire Rubber Grip RR" DisplayColorIndex="4" DisplayDPS="2"/>
+  <Descriptor Id="Tire Slip Angle FL" DisplayColorIndex="6" DisplayDPS="2"/>
+  <Descriptor Id="Tire Slip Angle FR" DisplayColorIndex="0" DisplayDPS="2"/>
+  <Descriptor Id="Tire Slip Angle RL" DisplayColorIndex="3" DisplayDPS="2"/>
+  <Descriptor Id="Tire Slip Angle RR" DisplayColorIndex="4" DisplayDPS="2"/>
+  <Descriptor Id="Tire Slip FL" DisplayColorIndex="6" DisplayDPS="3"/>
+  <Descriptor Id="Tire Slip Ratio FL" DisplayColorIndex="6" DisplayDPS="1"/>
+  <Descriptor Id="Tire Slip Ratio FR" DisplayColorIndex="0" DisplayDPS="1"/>
+  <Descriptor Id="Tire Slip Ratio RL" DisplayColorIndex="3" DisplayDPS="1"/>
+  <Descriptor Id="Tire Slip Ratio RR" DisplayColorIndex="4" DisplayDPS="1"/>
+  <Descriptor Id="Tire Slip RL" DisplayColorIndex="3" DisplayDPS="3"/>
+  <Descriptor Id="Tire Temp Core FL" DisplayColorIndex="2" DisplayDPS="1"/>
+  <Descriptor Id="Tire Temp Core FR" DisplayColorIndex="2" DisplayDPS="1"/>
+  <Descriptor Id="Tire Temp Core RL" DisplayColorIndex="2" DisplayDPS="1"/>
+  <Descriptor Id="Tire Temp Core RR" DisplayColorIndex="2" DisplayDPS="1"/>
+  <Descriptor Id="Tire Temp Inner FL" DisplayDPS="1"/>
+  <Descriptor Id="Tire Temp Inner FR" DisplayColorIndex="0" DisplayDPS="1"/>
+  <Descriptor Id="Tire Temp Inner RL" DisplayColorIndex="0" DisplayDPS="1"/>
+  <Descriptor Id="Tire Temp Inner RR" DisplayColorIndex="0" DisplayDPS="1"/>
+  <Descriptor Id="Tire Temp Middle FL" DisplayColorIndex="1" DisplayDPS="1"/>
+  <Descriptor Id="Tire Temp Middle FR" DisplayColorIndex="1" DisplayDPS="1"/>
+  <Descriptor Id="Tire Temp Middle RL" DisplayColorIndex="1" DisplayDPS="1"/>
+  <Descriptor Id="Tire Temp Middle RR" DisplayColorIndex="1" DisplayDPS="1"/>
+  <Descriptor Id="Tire Temp Outer FL" DisplayColorIndex="4" DisplayDPS="1"/>
+  <Descriptor Id="Tire Temp Outer FR" DisplayDPS="1"/>
+  <Descriptor Id="Tire Temp Outer RL" DisplayColorIndex="4" DisplayDPS="1"/>
+  <Descriptor Id="Tire Temp Outer RR" DisplayColorIndex="4" DisplayDPS="1"/>
+  <Descriptor Id="Tire Temperature FL" DisplayColorIndex="6" DisplayDPS="1"/>
+  <Descriptor Id="Tire Temperature FR" DisplayColorIndex="0" DisplayDPS="1"/>
+  <Descriptor Id="Tire Temperature RL" DisplayColorIndex="3" DisplayDPS="1"/>
+  <Descriptor Id="Tire Temperature RR" DisplayColorIndex="4" DisplayDPS="1"/>
+  <Descriptor Id="Toe In FL" DisplayColorIndex="6" DisplayDPS="2"/>
+  <Descriptor Id="Toe In FR" DisplayColorIndex="0" DisplayDPS="2"/>
+  <Descriptor Id="Toe In RL" DisplayColorIndex="3" DisplayDPS="2"/>
+  <Descriptor Id="Toe In RR" DisplayColorIndex="4" DisplayDPS="2"/>
+  <Descriptor Id="Turbo Boost" DisplayColorIndex="3" DisplayDPS="2" AnalysisInterpolationMode="3"/>
+  <Descriptor Id="Tyre Temp FL Centre" DisplayColorIndex="3"/>
+  <Descriptor Id="Tyre Temp FL Inner" DisplayColorIndex="5"/>
+  <Descriptor Id="Tyre Temp FL Outer" DisplayColorIndex="7"/>
+  <Descriptor Id="Tyre Temp FR Inner" DisplayColorIndex="6"/>
+  <Descriptor Id="Tyre Temp FR Outer" DisplayColorIndex="1"/>
+  <Descriptor Id="Wheel Angular Speed FL" DisplayColorIndex="6" DisplayDPS="2"/>
+  <Descriptor Id="Wheel Angular Speed FR" DisplayColorIndex="0" DisplayDPS="2"/>
+  <Descriptor Id="Wheel Angular Speed RL" DisplayColorIndex="3" DisplayDPS="2"/>
+  <Descriptor Id="Wheel Angular Speed RR" DisplayColorIndex="4" DisplayDPS="2"/>
+  <Descriptor Id="Wind Direction" DisplayColorIndex="3" DisplayDPS="1"/>
+  <Descriptor Id="Wind Speed" DisplayColorIndex="1" DisplayDPS="1"/>
+</Descriptors>

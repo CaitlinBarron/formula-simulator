@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataBlock Locale="English" Flags="0">
+  <Descriptors Version="10" Locale="English" Flags="7">
+    <Descriptor Id="Damper Velocity (Calc) FL" DataType="MoTeC.Float" DisplayColorIndex="6" DisplayDPS="1" AnalysisInterpolationMode="3" DisplayUnit="mm/s"/>
+    <Descriptor Id="Damper Velocity (Calc) FR" DataType="MoTeC.Float" DisplayColorIndex="0" DisplayDPS="1" AnalysisInterpolationMode="3" DisplayUnit="mm/s"/>
+    <Descriptor Id="Damper Velocity (Calc) RL" DataType="MoTeC.Float" DisplayColorIndex="3" DisplayDPS="1" AnalysisInterpolationMode="3" DisplayUnit="mm/s"/>
+    <Descriptor Id="Damper Velocity (Calc) RR" DataType="MoTeC.Float" DisplayColorIndex="4" DisplayDPS="1" AnalysisInterpolationMode="3" DisplayUnit="mm/s"/>
+    <Descriptor Id="GPS Latitude" DataType="MoTeC.Float" DisplayColorIndex="3" DisplayDPS="8" AnalysisInterpolationMode="3" DisplayUnit="deg"/>
+    <Descriptor Id="GPS Longitude" DataType="MoTeC.Float" DisplayColorIndex="4" DisplayDPS="8" AnalysisInterpolationMode="3" DisplayUnit="deg"/>
+  </Descriptors>
+  <Maths Id="User" Flags="191" Locale="English">
+    <MathConstants>
+      <MathConstant Name="EARTH_RADIUS" Type="MoTeC.Float" Unit="m" Value="6371000.0"/>
+      <MathConstant Name="GPS_BASE_LAT" Type="MoTeC.Float" Unit="deg" Value="44.048418019116745"/>
+      <MathConstant Name="GPS_BASE_LONG" Type="MoTeC.Float" Unit="deg" Value="-78.67530584335327"/>
+      <MathConstant Name="PI" Type="MoTeC.Float" Unit="" Value="3.14159265359"/>
+    </MathConstants>
+    <MathItems>
+      <MathExpression Id="GPS Latitude" Script="'Car Coord Y' [m]/'EARTH_RADIUS' [m]*180.0/'PI' []+'GPS_BASE_LAT' [deg]" SampleRate="0" Unit="deg" Active="1" Flags="0"/>
+      <MathExpression Id="GPS Longitude" Script="'Car Coord X' [m]/'EARTH_RADIUS' [m]*180.0/'PI' []+'GPS_BASE_LONG' [deg]" SampleRate="0" Unit="deg" Active="1" Flags="0"/>
+      <MathExpression Id="Damper Velocity (Calc) FL" Script="derivative('Suspension Travel FL' [mm])" SampleRate="0" Unit="mm/s" Active="1" Flags="0"/>
+      <MathExpression Id="Damper Velocity (Calc) FR" Script="derivative('Suspension Travel FR' [mm])" SampleRate="0" Unit="mm/s" Active="1" Flags="0"/>
+      <MathExpression Id="Damper Velocity (Calc) RL" Script="derivative('Suspension Travel RL' [mm])" SampleRate="0" Unit="mm/s" Active="1" Flags="0"/>
+      <MathExpression Id="Damper Velocity (Calc) RR" Script="derivative('Suspension Travel RR' [mm])" SampleRate="0" Unit="mm/s" Active="1" Flags="0"/>
+    </MathItems>
+  </Maths>
+</DataBlock>
