@@ -1,0 +1,14 @@
+C:\Users\Caitlin\Documents\repositories\personal code\formula-simulator\shared_mem\ac_mem_app\ac_mem_app\bin\Debug\netcoreapp3.0\ac_mem_app.exe
+C:\Users\Caitlin\Documents\repositories\personal code\formula-simulator\shared_mem\ac_mem_app\ac_mem_app\bin\Debug\netcoreapp3.0\ac_mem_app.deps.json
+C:\Users\Caitlin\Documents\repositories\personal code\formula-simulator\shared_mem\ac_mem_app\ac_mem_app\bin\Debug\netcoreapp3.0\ac_mem_app.runtimeconfig.json
+C:\Users\Caitlin\Documents\repositories\personal code\formula-simulator\shared_mem\ac_mem_app\ac_mem_app\bin\Debug\netcoreapp3.0\ac_mem_app.runtimeconfig.dev.json
+C:\Users\Caitlin\Documents\repositories\personal code\formula-simulator\shared_mem\ac_mem_app\ac_mem_app\bin\Debug\netcoreapp3.0\ac_mem_app.dll
+C:\Users\Caitlin\Documents\repositories\personal code\formula-simulator\shared_mem\ac_mem_app\ac_mem_app\bin\Debug\netcoreapp3.0\ac_mem_app.pdb
+C:\Users\Caitlin\Documents\repositories\personal code\formula-simulator\shared_mem\ac_mem_app\ac_mem_app\bin\Debug\netcoreapp3.0\AssettoCorsaSharedMemory.dll
+C:\Users\Caitlin\Documents\repositories\personal code\formula-simulator\shared_mem\ac_mem_app\ac_mem_app\bin\Debug\netcoreapp3.0\AssettoCorsaSharedMemory.pdb
+C:\Users\Caitlin\Documents\repositories\personal code\formula-simulator\shared_mem\ac_mem_app\ac_mem_app\obj\Debug\netcoreapp3.0\ac_mem_app.csprojAssemblyReference.cache
+C:\Users\Caitlin\Documents\repositories\personal code\formula-simulator\shared_mem\ac_mem_app\ac_mem_app\obj\Debug\netcoreapp3.0\ac_mem_app.AssemblyInfoInputs.cache
+C:\Users\Caitlin\Documents\repositories\personal code\formula-simulator\shared_mem\ac_mem_app\ac_mem_app\obj\Debug\netcoreapp3.0\ac_mem_app.AssemblyInfo.cs
+C:\Users\Caitlin\Documents\repositories\personal code\formula-simulator\shared_mem\ac_mem_app\ac_mem_app\obj\Debug\netcoreapp3.0\ac_mem_app.csproj.CopyComplete
+C:\Users\Caitlin\Documents\repositories\personal code\formula-simulator\shared_mem\ac_mem_app\ac_mem_app\obj\Debug\netcoreapp3.0\ac_mem_app.dll
+C:\Users\Caitlin\Documents\repositories\personal code\formula-simulator\shared_mem\ac_mem_app\ac_mem_app\obj\Debug\netcoreapp3.0\ac_mem_app.pdb

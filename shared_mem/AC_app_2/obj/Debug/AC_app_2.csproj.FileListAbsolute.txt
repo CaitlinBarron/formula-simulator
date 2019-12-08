@@ -1,0 +1,17 @@
+C:\Users\Caitlin\Documents\repositories\personal code\formula-simulator\shared_mem\AC_app_2\bin\Debug\AC_app_2.exe.config
+C:\Users\Caitlin\Documents\repositories\personal code\formula-simulator\shared_mem\AC_app_2\bin\Debug\AC_app_2.exe
+C:\Users\Caitlin\Documents\repositories\personal code\formula-simulator\shared_mem\AC_app_2\bin\Debug\AC_app_2.pdb
+C:\Users\Caitlin\Documents\repositories\personal code\formula-simulator\shared_mem\AC_app_2\obj\Debug\AC_app_2.csprojAssemblyReference.cache
+C:\Users\Caitlin\Documents\repositories\personal code\formula-simulator\shared_mem\AC_app_2\obj\Debug\MainWindow.g.cs
+C:\Users\Caitlin\Documents\repositories\personal code\formula-simulator\shared_mem\AC_app_2\obj\Debug\App.g.cs
+C:\Users\Caitlin\Documents\repositories\personal code\formula-simulator\shared_mem\AC_app_2\obj\Debug\AC_app_2_MarkupCompile.cache
+C:\Users\Caitlin\Documents\repositories\personal code\formula-simulator\shared_mem\AC_app_2\obj\Debug\AC_app_2_MarkupCompile.lref
+C:\Users\Caitlin\Documents\repositories\personal code\formula-simulator\shared_mem\AC_app_2\obj\Debug\MainWindow.baml
+C:\Users\Caitlin\Documents\repositories\personal code\formula-simulator\shared_mem\AC_app_2\obj\Debug\AC_app_2.g.resources
+C:\Users\Caitlin\Documents\repositories\personal code\formula-simulator\shared_mem\AC_app_2\obj\Debug\AC_app_2.Properties.Resources.resources
+C:\Users\Caitlin\Documents\repositories\personal code\formula-simulator\shared_mem\AC_app_2\obj\Debug\AC_app_2.csproj.GenerateResource.cache
+C:\Users\Caitlin\Documents\repositories\personal code\formula-simulator\shared_mem\AC_app_2\obj\Debug\AC_app_2.exe
+C:\Users\Caitlin\Documents\repositories\personal code\formula-simulator\shared_mem\AC_app_2\obj\Debug\AC_app_2.pdb
+C:\Users\Caitlin\Documents\repositories\personal code\formula-simulator\shared_mem\AC_app_2\bin\Debug\AssettoCorsaSharedMemory.dll
+C:\Users\Caitlin\Documents\repositories\personal code\formula-simulator\shared_mem\AC_app_2\bin\Debug\AssettoCorsaSharedMemory.pdb
+C:\Users\Caitlin\Documents\repositories\personal code\formula-simulator\shared_mem\AC_app_2\obj\Debug\AC_app_2.csproj.CopyComplete

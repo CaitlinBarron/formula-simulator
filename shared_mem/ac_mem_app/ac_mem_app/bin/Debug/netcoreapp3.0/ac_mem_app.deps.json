@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "ac_mem_app/1.0.0": {
+        "dependencies": {
+          "AssettoCorsaSharedMemory": "1.0.0.0"
+        },
+        "runtime": {
+          "ac_mem_app.dll": {}
+        }
+      },
+      "AssettoCorsaSharedMemory/1.0.0.0": {
+        "runtime": {
+          "AssettoCorsaSharedMemory.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ac_mem_app/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AssettoCorsaSharedMemory/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
