@@ -8,6 +8,7 @@ namespace ac_mem_app
         static void Main(string[] args)
         {
             AssettoCorsa ac = new AssettoCorsa();
+            ac.PhysicsInterval = 10;
             ac.PhysicsUpdated += AC_PhysicsUpdated; // Add event listener for StaticInfo
             ac.Start(); // Connect to shared memory and start interval timers 
 

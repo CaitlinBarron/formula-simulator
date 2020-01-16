@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataBlock Locale="English" Flags="0">
+  <Descriptors Version="10" Locale="English" Flags="7">
+    <Descriptor Id="Inverse Corner Radius" DataType="MoTeC.Float" DisplayColorIndex="0" DisplayDPS="2" AnalysisInterpolationMode="3"/>
+    <Descriptor Id="Oversteer" DataType="MoTeC.Float" DisplayColorIndex="0" DisplayDPS="2" AnalysisInterpolationMode="3" DisplayUnit="deg"/>
+    <Descriptor Id="Oversteer (Speed Weighted)" DataType="MoTeC.Float" DisplayColorIndex="1" DisplayDPS="2" AnalysisInterpolationMode="3" DisplayUnit="deg"/>
+    <Descriptor Id="Yaw Rate" DataType="MoTeC.Float" DisplayColorIndex="0" DisplayDPS="2" AnalysisInterpolationMode="3" DisplayUnit="deg/s"/>
+  </Descriptors>
+  <Maths Id="MoTeC" Flags="0" Locale="English">
+    <MathItems>
+      <MathExpression Id="Oversteer" Script="smooth(choose('Corr Speed'[km/h] &lt; 50, 0, sgn('G Force Lat'[m/s/s]) * (('Vehicle Wheelbase'[m] * 'G Force Lat'[m/s/s] / sqr('Corr Speed'[m/s])) - sgn(stat_mean('Steered Angle'[rad] * 'G Force Lat'[m/s/s])) * 'Steered Angle'[rad])), 0.2)" SampleRate="0" Unit="rad" Active="1" Flags="0"/>
+      <MathExpression Id="Oversteer (Speed Weighted)" Script="'Corr Speed'[km/h] / 80 * 'Oversteer'[deg]" SampleRate="0" Unit="deg" Active="1" Flags="0"/>
+      <MathExpression Id="Inverse Corner Radius" Script="choose('Corr Speed' [km/h] &gt; 30, 'G Force Lat' [m/s/s] / ('Corr Speed' [m/s]^2), 0.0)" SampleRate="0" Unit="" Active="1" Flags="0"/>
+      <MathExpression Id="Yaw Rate" Script="choose('Corr Speed' [km/h] &gt; 30, 'G Force Lat' [m/s/s] / 'Corr Speed' [m/s], 0.0)" SampleRate="0" Unit="rad/s" Active="1" Flags="0"/>
+    </MathItems>
+  </Maths>
+</DataBlock>

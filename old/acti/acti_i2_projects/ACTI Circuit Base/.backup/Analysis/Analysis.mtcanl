@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<Analysis Locale="English_United States.1252" Version="100" Name="Analysis" ShowOverlays="1" ExcludeUntrusted="1" IncludeOverlays="0" GraphTimeFormat="4" VideoDefaultViews="" SetupSheetPasswdReqd="0" RemoveOnChanDblClick="1" LapTimeDisplayFormat="0" LapTimeDisplayUnit="mph" LapNameInOut="1" AutoLapNumber="0" AskRemoveChannelIdDots="1" RemoveChannelIdDots="0" AbsSplitterPos="231">
+  <LatGTrackGen LateralGChannel="CG Accel Lateral"/>
+  <DataSelect SelectFastestOnLoad="1" DefaultShowDisabled="0" MainColorSource="0">
+    <Explore HRef="C:\Users\Latch Dimitrov\Desktop\acti\telem\ks_vallelunga_&amp;_ks_ferrari_312_67"/>
+    <DataSources>
+      <DataSource Name="C:\Users\Latch Dimitrov\Desktop\acti\telem\ks_vallelunga_&amp;_ks_ferrari_312_67\ks_vallelunga_&amp;_ks_ferrari_312_67_&amp;_Latch Dimitrov_&amp;_stint_1.ld">
+        <Ranges>
+          <Range ID="M" Name="Lap 2" Color="0"/>
+        </Ranges>
+      </DataSource>
+    </DataSources>
+    <Laps ColumnVersion="1" ColumnWidths="91:53:20:20:20:73:80:88"/>
+  </DataSelect>
+  <CursorWindow SplitterPos="7739" ShowTrack="1" ColumnWidthsSingle="160:51" ColumnWidthsMulti="110:46:46:46">
+    <Control Id="MoTeC.TrackPos" Name="CursorWindowTrack" AutoCaption="0" Supports="0" RectGridPts="0,0,30,30" DisplayTitleBar="0" LinkTo="Driver:General:Time/Distance [1]" LinkZoom="1" ModeId="" ShowDataLegend="1" Version="2" ShowSectLabels="0" ShowSectMarks="1" LinkCursor="1" UseLocalColors="0">
+      <ComponentColorScheme>
+        <Entry Name="CptDataBackground">
+          <RenderMode Mode="SCREEN" RGB="0,128,0"/>
+          <RenderMode Mode="PRINT" RGB="255,255,255"/>
+        </Entry>
+        <Entry Name="CptDataForeground">
+          <RenderMode Mode="SCREEN" RGB="255,255,255"/>
+          <RenderMode Mode="PRINT" RGB="0,0,0"/>
+        </Entry>
+        <Entry Name="RangeMark">
+          <RenderMode Mode="SCREEN" RGB="200,0,0"/>
+          <RenderMode Mode="PRINT" RGB="200,0,0"/>
+        </Entry>
+      </ComponentColorScheme>
+      <TrackMapWindow>
+        <SizeScheme>
+          <SizeSchemeEntry Name="Cursor" INTValue="10"/>
+          <SizeSchemeEntry Name="Detail" INTValue="3"/>
+          <SizeSchemeEntry Name="Material" INTValue="1"/>
+        </SizeScheme>
+      </TrackMapWindow>
+    </Control>
+  </CursorWindow>
+  <ChannelsWindow/>
+  <Control Id="MoTeC.TrackPos" Name="TrackPosCtrl.inner" AutoCaption="0" Supports="0" RectGridPts="0,0,30,30" DisplayTitleBar="0" LinkTo="Driver:General:Time/Distance [1]" LinkZoom="1" ModeId="" ShowDataLegend="1" Version="2" ShowSectLabels="0" ShowSectMarks="1" LinkCursor="1" UseLocalColors="0">
+    <ComponentColorScheme>
+      <Entry Name="CptDataBackground">
+        <RenderMode Mode="SCREEN" RGB="0,128,0"/>
+        <RenderMode Mode="PRINT" RGB="255,255,255"/>
+      </Entry>
+      <Entry Name="CptDataForeground">
+        <RenderMode Mode="SCREEN" RGB="255,255,255"/>
+        <RenderMode Mode="PRINT" RGB="0,0,0"/>
+      </Entry>
+      <Entry Name="RangeMark">
+        <RenderMode Mode="SCREEN" RGB="200,0,0"/>
+        <RenderMode Mode="PRINT" RGB="200,0,0"/>
+      </Entry>
+    </ComponentColorScheme>
+    <TrackMapWindow>
+      <SizeScheme>
+        <SizeSchemeEntry Name="Cursor" INTValue="7"/>
+        <SizeSchemeEntry Name="Detail" INTValue="1"/>
+        <SizeSchemeEntry Name="Material" INTValue="1"/>
+      </SizeScheme>
+    </TrackMapWindow>
+  </Control>
+  <DockWindows>
+    <DockWindow Id="Data" Visible="1" IsDocked="1" IsPinned="1" DockOffset="0" DockSide="35" DockIndex="0" Width="449"/>
+    <DockWindow Id="Channels" Visible="1" IsDocked="1" IsPinned="1" DockOffset="0" DockSide="35" DockIndex="1" Width="220"/>
+    <DockWindow Id="Reports" Visible="1" IsDocked="1" IsPinned="1" DockOffset="0" DockSide="35" DockIndex="2" Width="220"/>
+    <DockWindow Id="Track" Visible="0" IsDocked="0" Position="460,323,701,491"/>
+  </DockWindows>
+  <DataExport Path="C:\Users\Latch Dimitrov\Desktop\test_trial_lap.csv" Selection="1" Rate="10" Flags="0"/>
+  <VideoGenerate VideoView="" Selection="0">
+    <OptionItems/>
+  </VideoGenerate>
+  <ConversionWizard ConverterId="0" InFilesChkd="1" InFilesDir="" InFoldersDir="" InSubFolderChkd="1" OutFolderChkd="0" OutFolder="" UnitMappingLastUsed="" OpenFilesChkd="0" OverwriteChkd="0"/>
+  <TelemetryServers Enabled="0"/>
+  <Workbooks Active="Driver">
+    <Workbook Name="Driver" XRef="Workbooks\Driver.mtcwkb"/>
+    <Workbook Name="Engine &amp; Gearbox" XRef="Workbooks\Engine &amp; Gearbox.mtcwkb"/>
+    <Workbook Name="Chassis" XRef="Workbooks\Chassis.mtcwkb"/>
+    <Workbook Name="Suspension" XRef="Workbooks\Suspension.mtcwkb"/>
+    <Workbook Name="Brakes" XRef="Workbooks\Brakes.mtcwkb"/>
+    <Workbook Name="Tires" XRef="Workbooks\Tires.mtcwkb"/>
+    <Workbook Name="Circuit" XRef="Workbooks\Circuit.mtcwkb"/>
+    <Workbook Name="Misc" XRef="Workbooks\Misc.mtcwkb"/>
+  </Workbooks>
+</Analysis>

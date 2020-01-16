@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO.Ports;
+using AssettoCorsaSharedMemory;
 
 namespace AC_app_2
 {
@@ -32,6 +33,28 @@ namespace AC_app_2
             motionSlider.IsEnabled = false;
             disconnectBtn.IsEnabled = false;
             scaleBox.IsEnabled = false;
+
+            AssettoCorsa ac = new AssettoCorsa();
+            ac.PhysicsInterval = 10;
+            ac.GraphicsInterval = 10000;
+            ac.StaticInfoInterval = 5000;
+            ac.PhysicsUpdated += AC_PhysicsUpdated; // Add event listener for StaticInfo
+            ac.GraphicsUpdated += AC_GraphicsUpdated;
+            ac.Start(); // Connect to shared memory and start interval timers 
+            Console.Read();
+        }
+
+        static void AC_PhysicsUpdated(object sender, PhysicsEventArgs e)
+        {
+            Console.WriteLine("Pitch = " + e.Physics.Pitch + ", Roll = " + e.Physics.Roll);
+        }
+
+        static void AC_GraphicsUpdated(object sender, GraphicsEventArgs e)
+        {
+            if (e.Graphics.Status == AC_STATUS.AC_PAUSE)
+            {
+                Console.WriteLine("Paused");
+            }
         }
 
         private void connectBtn_Click(object sender, RoutedEventArgs e)
