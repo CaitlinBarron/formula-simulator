@@ -23,7 +23,15 @@ namespace AC_app_2
     /// </summary>
     public partial class MainWindow : Window
     {
-        public SerialPort _port;
+        SerialPort _port;
+        string pitchPosCommand = "02503A2B{0}{1}{2}03";    //STX P : + <3 digits> ETX
+        string pitchNegCommand = "02503A2D{0}{1}{2}03";    //STX P : - <3 digits> ETX
+        string rollPosCommand = "02523A2B{0}{1}{2}03";     //STX R : + <3 digits> ETX
+        string rollNegCommand = "02523A2D{0}{1}{2}03";     //STX R : - <3 digits> ETX
+        string zeroCommand = "025A03";                     //STX Z ETX
+        string stopCommand = "025303";                     //STX S ETX
+        float pitch;
+        float roll;
 
         public MainWindow()
         {
@@ -37,6 +45,9 @@ namespace AC_app_2
             disconnectBtn.IsEnabled = false;
             scaleBox.IsEnabled = false;
 
+            pitch = 0;
+            roll = 0;
+
             AssettoCorsa ac = new AssettoCorsa();
             ac.PhysicsInterval = 500;        // these are in milliseconds
             ac.GraphicsInterval = 10000;
@@ -48,23 +59,57 @@ namespace AC_app_2
             
         }
 
-        private void AC_PhysicsUpdated(object sender, PhysicsEventArgs e)
+        public void AC_PhysicsUpdated(object sender, PhysicsEventArgs e)
         {
             //Console.WriteLine("Pitch = " + e.Physics.Pitch + "°, Roll = " + e.Physics.Roll + "°");
-            string adjustedPitch = (e.Physics.Pitch * 10).ToString("00.00");
-            string adjustedRoll = (e.Physics.Roll * 10).ToString("00.00");
-            Console.WriteLine("Pitch = " + adjustedPitch + "°, Roll = " + adjustedRoll + "°");
+            string pitchForm;
+            string rollForm;
+            float pitchDelta = e.Physics.Pitch * 10;
+            float rollDelta = e.Physics.Roll * 10;
+            if (pitchDelta >= 0)
+            {
+                pitchForm = pitchPosCommand;
+            }
+            else
+            {
+                pitchForm = pitchNegCommand;
+            }
+
+            if (rollDelta >= 0)
+            {
+                rollForm = rollPosCommand;
+            }
+            else
+            {
+                rollForm = rollNegCommand;
+            }
+
+            pitch += pitchDelta;
+            roll += rollDelta;
+
+            string pitchStr = pitch.ToString("0.00");
+            string rollStr = roll.ToString("0.00");
+
+            pitchStr = pitchStr.Replace("-", "");
+            rollStr = rollStr.Replace("-", "");
+
+            string fullPitch = String.Format(pitchForm, Convert.ToByte(pitchStr[0]).ToString("X2"), Convert.ToByte(pitchStr[2]).ToString("X2"), Convert.ToByte(pitchStr[3]).ToString("X2"));
+            string fullRoll = String.Format(rollForm, Convert.ToByte(rollStr[0]).ToString("X2"), Convert.ToByte(rollStr[2]).ToString("X2"), Convert.ToByte(rollStr[3]).ToString("X2"));
             
             try
             {
                 if (_port.IsOpen)
                 {
-                    _port.Write("Pitch = " + adjustedPitch + "°, Roll = " + adjustedRoll + "°");
+                    Console.WriteLine("Pitch = " + pitchStr + "°, Roll = " + rollStr + "°");
+                    Console.WriteLine("pitch: " + fullPitch);
+                    Console.WriteLine("roll: " + fullRoll + "\n");
+                    _port.Write(fullPitch);
+                    _port.Write(fullRoll);
                 }   
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "error writing to port", MessageBoxButton.OK, MessageBoxImage.Error);
+                Console.WriteLine("error writing to port: " + ex.Message);
             }
         }
 

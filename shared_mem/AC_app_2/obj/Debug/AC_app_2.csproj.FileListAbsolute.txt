@@ -14,3 +14,4 @@ C:\Users\Caitlin\Documents\repositories\personal code\formula-simulator\shared_m
 C:\Users\Caitlin\Documents\repositories\personal code\formula-simulator\shared_mem\AC_app_2\obj\Debug\AC_app_2.csproj.CopyComplete
 C:\Users\Caitlin\Documents\repositories\personal code\formula-simulator\shared_mem\AC_app_2\obj\Debug\AC_app_2.exe
 C:\Users\Caitlin\Documents\repositories\personal code\formula-simulator\shared_mem\AC_app_2\obj\Debug\AC_app_2.pdb
+C:\Users\Caitlin\Documents\repositories\personal code\formula-simulator\shared_mem\AC_app_2\obj\Debug\AC_app_2.csprojAssemblyReference.cache
