@@ -23,7 +23,7 @@ namespace AC_app_2
     /// </summary>
     public partial class MainWindow : Window
     {
-        SerialPort port;
+        public SerialPort _port;
 
         public MainWindow()
         {
@@ -45,14 +45,27 @@ namespace AC_app_2
             ///ac.GraphicsUpdated += AC_GraphicsUpdated;
             ac.Start(); // Connect to shared memory and start interval timers 
             Console.Read();
+            
         }
 
-        static void AC_PhysicsUpdated(object sender, PhysicsEventArgs e)
+        private void AC_PhysicsUpdated(object sender, PhysicsEventArgs e)
         {
             //Console.WriteLine("Pitch = " + e.Physics.Pitch + "°, Roll = " + e.Physics.Roll + "°");
             string adjustedPitch = (e.Physics.Pitch * 10).ToString("00.00");
             string adjustedRoll = (e.Physics.Roll * 10).ToString("00.00");
             Console.WriteLine("Pitch = " + adjustedPitch + "°, Roll = " + adjustedRoll + "°");
+            
+            try
+            {
+                if (_port.IsOpen)
+                {
+                    _port.Write("Pitch = " + adjustedPitch + "°, Roll = " + adjustedRoll + "°");
+                }   
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "error writing to port", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         ///static void AC_GraphicsUpdated(object sender, GraphicsEventArgs e)
@@ -75,12 +88,12 @@ namespace AC_app_2
             portCombo.IsEnabled = false;
             try
             {
-                port = new SerialPort(portCombo.Text);
-                port.Open();
+                _port = new SerialPort(portCombo.Text);
+                _port.Open();
             }
             catch(Exception ex)
             {
-                MessageBox.Show(ex.Message, "Message", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show(ex.Message, "cannot connect to " + portCombo.Text, MessageBoxButton.OK, MessageBoxImage.Error);
             }
             
         }
@@ -91,7 +104,7 @@ namespace AC_app_2
             disconnectBtn.IsEnabled = false;
             try
             {
-                port.Close();
+                _port.Close();
             }
             catch (Exception ex)
             {
@@ -152,9 +165,9 @@ namespace AC_app_2
 
         private void MainWindow_Closed(object sender, EventArgs e)
         {
-            if (port != null && port.IsOpen)
+            if (_port != null && _port.IsOpen)
             {
-                port.Close();
+                _port.Close();
             }
         }
     }
