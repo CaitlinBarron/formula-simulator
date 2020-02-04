@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO.Ports;
 using AssettoCorsaSharedMemory;
+using System.Globalization;
 
 namespace AC_app_2
 {
@@ -22,10 +23,12 @@ namespace AC_app_2
     /// </summary>
     public partial class MainWindow : Window
     {
+        SerialPort port;
 
         public MainWindow()
         {
             InitializeComponent();
+            this.Closed += MainWindow_Closed;
             string[] portNames = SerialPort.GetPortNames();
             portCombo.ItemsSource = portNames;
             statusBar.Text = "Motion settings can not be changed during a race";
@@ -35,27 +38,34 @@ namespace AC_app_2
             scaleBox.IsEnabled = false;
 
             AssettoCorsa ac = new AssettoCorsa();
-            ac.PhysicsInterval = 10;
+            ac.PhysicsInterval = 500;        // these are in milliseconds
             ac.GraphicsInterval = 10000;
             ac.StaticInfoInterval = 5000;
             ac.PhysicsUpdated += AC_PhysicsUpdated; // Add event listener for StaticInfo
-            ac.GraphicsUpdated += AC_GraphicsUpdated;
+            ///ac.GraphicsUpdated += AC_GraphicsUpdated;
             ac.Start(); // Connect to shared memory and start interval timers 
             Console.Read();
         }
 
         static void AC_PhysicsUpdated(object sender, PhysicsEventArgs e)
         {
-            Console.WriteLine("Pitch = " + e.Physics.Pitch + ", Roll = " + e.Physics.Roll);
+            string adjustedPitch = (e.Physics.Pitch * 10).ToString("00.0");
+            string adjustedRoll = (e.Physics.Roll * 10).ToString("00.0");
+            Console.WriteLine("Pitch = " + adjustedPitch + "°, Roll = " + adjustedRoll + "°");
         }
 
-        static void AC_GraphicsUpdated(object sender, GraphicsEventArgs e)
-        {
-            if (e.Graphics.Status == AC_STATUS.AC_PAUSE)
-            {
-                Console.WriteLine("Paused");
-            }
-        }
+        ///static void AC_GraphicsUpdated(object sender, GraphicsEventArgs e)
+        ///{
+        ///    try
+        ///    {
+        ///        AC_STATUS status = e.Graphics.Status;
+        ///        Console.WriteLine("game status: " + status);
+        ///    }
+        ///    catch (Exception except)
+        ///    {
+        ///        Console.WriteLine("caught : " + except);
+        ///    }
+        ///}
 
         private void connectBtn_Click(object sender, RoutedEventArgs e)
         {
@@ -64,7 +74,7 @@ namespace AC_app_2
             portCombo.IsEnabled = false;
             try
             {
-                SerialPort port = new SerialPort(portCombo.Text);
+                port = new SerialPort(portCombo.Text);
                 port.Open();
             }
             catch(Exception ex)
@@ -80,7 +90,6 @@ namespace AC_app_2
             disconnectBtn.IsEnabled = false;
             try
             {
-                SerialPort port = new SerialPort(portCombo.Text);
                 port.Close();
             }
             catch (Exception ex)
@@ -137,6 +146,14 @@ namespace AC_app_2
             else
             {
                 scaleBox.Text = currNum.ToString();
+            }
+        }
+
+        private void MainWindow_Closed(object sender, EventArgs e)
+        {
+            if (port != null && port.IsOpen)
+            {
+                port.Close();
             }
         }
     }
