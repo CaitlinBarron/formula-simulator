@@ -49,8 +49,9 @@ namespace AC_app_2
 
         static void AC_PhysicsUpdated(object sender, PhysicsEventArgs e)
         {
-            string adjustedPitch = (e.Physics.Pitch * 10).ToString("00.0");
-            string adjustedRoll = (e.Physics.Roll * 10).ToString("00.0");
+            //Console.WriteLine("Pitch = " + e.Physics.Pitch + "°, Roll = " + e.Physics.Roll + "°");
+            string adjustedPitch = (e.Physics.Pitch * 10).ToString("00.00");
+            string adjustedRoll = (e.Physics.Roll * 10).ToString("00.00");
             Console.WriteLine("Pitch = " + adjustedPitch + "°, Roll = " + adjustedRoll + "°");
         }
 
