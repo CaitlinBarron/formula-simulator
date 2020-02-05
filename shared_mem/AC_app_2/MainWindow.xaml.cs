@@ -23,6 +23,7 @@ namespace AC_app_2
     /// </summary>
     public partial class MainWindow : Window
     {
+        AssettoCorsa acSession;
         SerialPort _port;
         string pitchPosCommand = "02503A2B{0}{1}{2}03";    //STX P : + <3 digits> ETX
         string pitchNegCommand = "02503A2D{0}{1}{2}03";    //STX P : - <3 digits> ETX
@@ -32,6 +33,7 @@ namespace AC_app_2
         string stopCommand = "025303";                     //STX S ETX
         float pitch;
         float roll;
+        AC_STATUS gameStat;
 
         public MainWindow()
         {
@@ -47,26 +49,31 @@ namespace AC_app_2
 
             pitch = 0;
             roll = 0;
+            gameStat = AC_STATUS.AC_OFF;
 
-            AssettoCorsa ac = new AssettoCorsa();
-            ac.PhysicsInterval = 500;        // these are in milliseconds
-            ac.GraphicsInterval = 10000;
-            ac.StaticInfoInterval = 5000;
-            ac.PhysicsUpdated += AC_PhysicsUpdated; // Add event listener for StaticInfo
-            ///ac.GraphicsUpdated += AC_GraphicsUpdated;
-            ac.Start(); // Connect to shared memory and start interval timers 
+            acSession = new AssettoCorsa();
+            acSession.PhysicsInterval = 500;        // these are in milliseconds
+            acSession.GraphicsInterval = 10000;
+            acSession.StaticInfoInterval = 5000;
+            acSession.PhysicsUpdated += AC_PhysicsUpdated; // Add event listener for StaticInfo
+            acSession.GameStatusChanged += AC_GameStatusChanged;
+            //acSession.GraphicsUpdated += AC_GraphicsUpdated;
+            acSession.Start(); // Connect to shared memory and start interval timers 
             Console.Read();
             
         }
 
-        public void AC_PhysicsUpdated(object sender, PhysicsEventArgs e)
+        private void AC_PhysicsUpdated(object sender, PhysicsEventArgs e)
         {
             //Console.WriteLine("Pitch = " + e.Physics.Pitch + "°, Roll = " + e.Physics.Roll + "°");
             string pitchForm;
             string rollForm;
-            float pitchDelta = e.Physics.Pitch * 10;
-            float rollDelta = e.Physics.Roll * 10;
-            if (pitchDelta >= 0)
+            float pitch = e.Physics.Pitch * (180 / Convert.ToSingle(Math.PI));
+            float roll = e.Physics.Roll * (180 / Convert.ToSingle(Math.PI));
+            Graphics graphicsData = acSession.ReadGraphics();
+            Console.WriteLine(graphicsData.Status);
+
+            if (pitch >= 0)
             {
                 pitchForm = pitchPosCommand;
             }
@@ -75,7 +82,7 @@ namespace AC_app_2
                 pitchForm = pitchNegCommand;
             }
 
-            if (rollDelta >= 0)
+            if (roll >= 0)
             {
                 rollForm = rollPosCommand;
             }
@@ -84,25 +91,23 @@ namespace AC_app_2
                 rollForm = rollNegCommand;
             }
 
-            pitch += pitchDelta;
-            roll += rollDelta;
-
             string pitchStr = pitch.ToString("0.00");
             string rollStr = roll.ToString("0.00");
 
-            pitchStr = pitchStr.Replace("-", "");
-            rollStr = rollStr.Replace("-", "");
+            string pitchStrTrim = pitchStr.Replace("-", "");
+            string rollStrTrim = rollStr.Replace("-", "");
 
-            string fullPitch = String.Format(pitchForm, Convert.ToByte(pitchStr[0]).ToString("X2"), Convert.ToByte(pitchStr[2]).ToString("X2"), Convert.ToByte(pitchStr[3]).ToString("X2"));
-            string fullRoll = String.Format(rollForm, Convert.ToByte(rollStr[0]).ToString("X2"), Convert.ToByte(rollStr[2]).ToString("X2"), Convert.ToByte(rollStr[3]).ToString("X2"));
+            string fullPitch = String.Format(pitchForm, Convert.ToByte(pitchStrTrim[0]).ToString("X2"), Convert.ToByte(pitchStrTrim[2]).ToString("X2"), Convert.ToByte(pitchStrTrim[3]).ToString("X2"));
+            string fullRoll = String.Format(rollForm, Convert.ToByte(rollStrTrim[0]).ToString("X2"), Convert.ToByte(rollStrTrim[2]).ToString("X2"), Convert.ToByte(rollStrTrim[3]).ToString("X2"));
             
             try
             {
                 if (_port.IsOpen)
                 {
-                    Console.WriteLine("Pitch = " + pitchStr + "°, Roll = " + rollStr + "°");
-                    Console.WriteLine("pitch: " + fullPitch);
-                    Console.WriteLine("roll: " + fullRoll + "\n");
+                    Console.WriteLine("Pitch = " + pitchStr + "°, Roll = " + rollStr + "° \n");
+                    Console.WriteLine("accel = " + e.Physics.SpeedKmh); //this is ~0 when in menu and pits but paused is constant
+                    //Console.WriteLine("pitch: " + fullPitch);
+                    //Console.WriteLine("roll: " + fullRoll + "\n");
                     _port.Write(fullPitch);
                     _port.Write(fullRoll);
                 }   
@@ -113,18 +118,29 @@ namespace AC_app_2
             }
         }
 
-        ///static void AC_GraphicsUpdated(object sender, GraphicsEventArgs e)
-        ///{
-        ///    try
-        ///    {
-        ///        AC_STATUS status = e.Graphics.Status;
-        ///        Console.WriteLine("game status: " + status);
-        ///    }
-        ///    catch (Exception except)
-        ///    {
-        ///        Console.WriteLine("caught : " + except);
-        ///    }
-        ///}
+
+        private void AC_GameStatusChanged(object sender, EventArgs e)
+        {
+            Console.WriteLine("status changed = " + e.ToString() + "\n");
+        }
+
+
+        /*private void AC_GraphicsUpdated(object sender, GraphicsEventArgs e)
+        {
+            try
+            {
+                AC_STATUS currStat = e.Graphics.Status;
+                if ((currStat != null) && (currStat != gameStat))
+                {
+                    gameStat = currStat;
+                    Console.WriteLine("game status: " + gameStat + "\n");
+                }
+            }
+            catch (Exception except)
+            {
+                Console.WriteLine("caught : " + except);
+            }
+        }*/
 
         private void connectBtn_Click(object sender, RoutedEventArgs e)
         {
@@ -145,8 +161,6 @@ namespace AC_app_2
 
         private void disconnectBtn_Click(object sender, RoutedEventArgs e)
         {
-            connectBtn.IsEnabled = true;
-            disconnectBtn.IsEnabled = false;
             try
             {
                 _port.Close();
@@ -157,6 +171,8 @@ namespace AC_app_2
             }
             finally
             {
+                connectBtn.IsEnabled = true;
+                disconnectBtn.IsEnabled = false;
                 portCombo.IsEnabled = true;
             }
         }
