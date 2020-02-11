@@ -65,30 +65,26 @@ namespace AC_app_2
 
         private void AC_PhysicsUpdated(object sender, PhysicsEventArgs e)
         {
-            //Console.WriteLine("Pitch = " + e.Physics.Pitch + "°, Roll = " + e.Physics.Roll + "°");
-            string pitchForm;
-            string rollForm;
+            string pitchForm = pitchNegCommand;
+            string rollForm = rollNegCommand;
             float pitch = e.Physics.Pitch * (180 / Convert.ToSingle(Math.PI));
             float roll = e.Physics.Roll * (180 / Convert.ToSingle(Math.PI));
+
             Graphics graphicsData = acSession.ReadGraphics();
-            Console.WriteLine(graphicsData.Status);
+            AC_STATUS currStat = graphicsData.Status;
+            if (currStat != gameStat)
+            {
+                gameStat = currStat;
+            }
 
             if (pitch >= 0)
             {
                 pitchForm = pitchPosCommand;
             }
-            else
-            {
-                pitchForm = pitchNegCommand;
-            }
 
             if (roll >= 0)
             {
                 rollForm = rollPosCommand;
-            }
-            else
-            {
-                rollForm = rollNegCommand;
             }
 
             string pitchStr = pitch.ToString("00.0");
@@ -100,14 +96,13 @@ namespace AC_app_2
             string fullPitch = String.Format(pitchForm, Convert.ToByte(pitchStrTrim[0]).ToString("X2"), Convert.ToByte(pitchStrTrim[1]).ToString("X2"), Convert.ToByte(pitchStrTrim[3]).ToString("X2"));
             string fullRoll = String.Format(rollForm, Convert.ToByte(rollStrTrim[0]).ToString("X2"), Convert.ToByte(rollStrTrim[1]).ToString("X2"), Convert.ToByte(rollStrTrim[3]).ToString("X2"));
             
+            Console.WriteLine("Pitch = " + pitchStr + "°, Roll = " + rollStr + "° \n");
+            Console.WriteLine("accel = " + e.Physics.SpeedKmh); //this is ~0 when in menu and pits but paused is constant
             try
             {
                 if (_port.IsOpen)
                 {
-                    Console.WriteLine("Pitch = " + pitchStr + "°, Roll = " + rollStr + "° \n");
-                    Console.WriteLine("accel = " + e.Physics.SpeedKmh); //this is ~0 when in menu and pits but paused is constant
-                    //Console.WriteLine("pitch: " + fullPitch);
-                    //Console.WriteLine("roll: " + fullRoll + "\n");
+                    Console.WriteLine("sending pitch and roll commands to port");
                     _port.Write(fullPitch);
                     _port.Write(fullRoll);
                 }   
@@ -218,6 +213,40 @@ namespace AC_app_2
             {
                 _port.Close();
             }
+        }
+
+        private void forwardBtn_Click(object sender, RoutedEventArgs e)
+        {
+            /*string pitch = -01.0
+            string fullPitch = String.Format(pitchForm, Convert.ToByte(pitchStrTrim[0]).ToString("X2"), Convert.ToByte(pitchStrTrim[1]).ToString("X2"), Convert.ToByte(pitchStrTrim[3]).ToString("X2"));
+            string fullRoll = String.Format(rollForm, Convert.ToByte(rollStrTrim[0]).ToString("X2"), Convert.ToByte(rollStrTrim[1]).ToString("X2"), Convert.ToByte(rollStrTrim[3]).ToString("X2"));
+            try
+            {
+                if (_port.IsOpen)
+                {
+                    Console.WriteLine("sending full forward command to port");
+                    _port.Write(fullPitch);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("error writing to port: " + ex.Message);
+            }*/
+        }
+
+        private void rightBtn_Click(object sender, RoutedEventArgs e)
+        {
+            //roll = +01.0
+        }
+
+        private void leftBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void backBtn_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

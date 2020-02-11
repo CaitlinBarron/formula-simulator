@@ -5,22 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AC_app_2"
         mc:Ignorable="d"
-        Title="RIT Formula Sim" Height="295.778" Width="495.556" Topmost="True" Background="White">
+        Title="RIT Formula Sim" Height="269.556" Width="677.778" Topmost="True" Background="White">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="22*"/>
+            <ColumnDefinition Width="401*"/>
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
-        <Label x:Name="portLbl" Content="Select Port" HorizontalAlignment="Left" Margin="56,151,0,0" VerticalAlignment="Top" FontWeight="Bold" Height="26" Width="71"/>
-        <ComboBox x:Name="portCombo" HorizontalAlignment="Left" Margin="132,151,0,0" VerticalAlignment="Top" Width="126" Height="22"/>
-        <Button x:Name="connectBtn" Content="Connect" HorizontalAlignment="Left" Margin="275,154,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.332,0.153" Click="connectBtn_Click" Height="20"/>
-        <Button x:Name="disconnectBtn" Content="Disconnect" HorizontalAlignment="Left" Margin="362,154,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.243,0.403" Height="20" Click="disconnectBtn_Click"/>
-        <Slider x:Name="motionSlider" HorizontalAlignment="Left" Margin="123,64,0,0" VerticalAlignment="Top" Width="251" Height="17" ValueChanged="motionSlider_ValueChanged" Maximum="100" TickFrequency="10" TickPlacement="BottomRight"/>
-        <CheckBox x:Name="scaleCheck" Content="Enable Sim Motion" HorizontalAlignment="Left" Margin="184,31,0,0" VerticalAlignment="Top" Checked="scaleCheck_Changed" Unchecked="scaleCheck_Changed" Height="14" Width="119"/>
-        <TextBox x:Name="scaleBox" HorizontalAlignment="Left" Height="22" Margin="214,86,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="65" RenderTransformOrigin="0.631,0.396" TextAlignment="Center" TextChanged="scaleBox_TextChanged"/>
-        <Label Content="0%" HorizontalAlignment="Left" Margin="91,55,0,0" VerticalAlignment="Top" Height="26"/>
-        <Label Content="100%" HorizontalAlignment="Left" Margin="379,55,0,0" VerticalAlignment="Top" Height="26"/>
-        <TextBlock x:Name="statusBar" HorizontalAlignment="Left" Margin="56,204,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="381" Height="40" TextAlignment="Center" FontWeight="Bold"/>
+        <Label x:Name="portLbl" Content="Select Port" HorizontalAlignment="Left" Margin="21,146,0,0" VerticalAlignment="Top" FontWeight="Bold" Height="26" Width="71" Grid.ColumnSpan="2"/>
+        <ComboBox x:Name="portCombo" HorizontalAlignment="Left" Margin="57,147,0,0" VerticalAlignment="Top" Width="126" Height="22" Grid.Column="1"/>
+        <Button x:Name="connectBtn" Content="Connect" HorizontalAlignment="Left" Margin="200,150,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.332,0.153" Click="connectBtn_Click" Height="20" Grid.Column="1"/>
+        <Button x:Name="disconnectBtn" Content="Disconnect" HorizontalAlignment="Left" Margin="287,150,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.243,0.403" Height="20" Click="disconnectBtn_Click" Grid.Column="1"/>
+        <Slider x:Name="motionSlider" HorizontalAlignment="Left" Margin="48,60,0,0" VerticalAlignment="Top" Width="251" Height="17" ValueChanged="motionSlider_ValueChanged" Maximum="100" TickFrequency="10" TickPlacement="BottomRight" Grid.Column="1"/>
+        <CheckBox x:Name="scaleCheck" Content="Enable Sim Motion" HorizontalAlignment="Left" Margin="109,27,0,0" VerticalAlignment="Top" Checked="scaleCheck_Changed" Unchecked="scaleCheck_Changed" Height="14" Width="119" Grid.Column="1"/>
+        <TextBox x:Name="scaleBox" HorizontalAlignment="Left" Height="22" Margin="139,82,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="65" RenderTransformOrigin="0.631,0.396" TextAlignment="Center" TextChanged="scaleBox_TextChanged" Grid.Column="1"/>
+        <Label Content="0%" HorizontalAlignment="Left" Margin="19.889,51,0,0" VerticalAlignment="Top" Height="26" Grid.Column="1" Width="27"/>
+        <Label Content="100%" HorizontalAlignment="Left" Margin="294.889,51,0,0" VerticalAlignment="Top" Height="26" Grid.Column="1" Width="39"/>
+        <TextBlock x:Name="statusBar" HorizontalAlignment="Left" Margin="35,198,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="381" Height="40" TextAlignment="Center" FontWeight="Bold" Grid.ColumnSpan="2"/>
+        <Label x:Name="demoLbl" Content="Movement Demo" Grid.Column="1" HorizontalAlignment="Left" Margin="471,37,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Button x:Name="forwardBtn" Content="↑" Grid.Column="1" HorizontalAlignment="Left" Margin="504,81,0,0" VerticalAlignment="Top" Width="35" Height="35" FontWeight="Bold" FontSize="20" Click="forwardBtn_Click"/>
+        <Button x:Name="backBtn" Content="↓" Grid.Column="1" HorizontalAlignment="Left" Margin="504,157,0,0" VerticalAlignment="Top" Width="35" Height="35" FontWeight="Bold" FontSize="20" Click="backBtn_Click"/>
+        <Button x:Name="leftBtn" Content="←" Grid.Column="1" HorizontalAlignment="Left" Margin="466,119,0,0" VerticalAlignment="Top" Width="35" Height="35" FontWeight="Bold" FontSize="20" Click="leftBtn_Click"/>
+        <Button x:Name="rightBtn" Content="→" Grid.Column="1" HorizontalAlignment="Left" Margin="542,119,0,0" VerticalAlignment="Top" Width="35" Height="35" FontWeight="Bold" FontSize="20" Click="rightBtn_Click"/>
 
     </Grid>
 </Window>
