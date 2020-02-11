@@ -57,11 +57,11 @@ namespace AC_app_2
             acSession.StaticInfoInterval = 5000;
             acSession.PhysicsUpdated += AC_PhysicsUpdated; // Add event listener for StaticInfo
             acSession.GameStatusChanged += AC_GameStatusChanged;
-            //acSession.GraphicsUpdated += AC_GraphicsUpdated;
             acSession.Start(); // Connect to shared memory and start interval timers 
             Console.Read();
             
         }
+
 
         private void AC_PhysicsUpdated(object sender, PhysicsEventArgs e)
         {
@@ -91,14 +91,14 @@ namespace AC_app_2
                 rollForm = rollNegCommand;
             }
 
-            string pitchStr = pitch.ToString("0.00");
-            string rollStr = roll.ToString("0.00");
+            string pitchStr = pitch.ToString("00.0");
+            string rollStr = roll.ToString("00.0");
 
             string pitchStrTrim = pitchStr.Replace("-", "");
             string rollStrTrim = rollStr.Replace("-", "");
 
-            string fullPitch = String.Format(pitchForm, Convert.ToByte(pitchStrTrim[0]).ToString("X2"), Convert.ToByte(pitchStrTrim[2]).ToString("X2"), Convert.ToByte(pitchStrTrim[3]).ToString("X2"));
-            string fullRoll = String.Format(rollForm, Convert.ToByte(rollStrTrim[0]).ToString("X2"), Convert.ToByte(rollStrTrim[2]).ToString("X2"), Convert.ToByte(rollStrTrim[3]).ToString("X2"));
+            string fullPitch = String.Format(pitchForm, Convert.ToByte(pitchStrTrim[0]).ToString("X2"), Convert.ToByte(pitchStrTrim[1]).ToString("X2"), Convert.ToByte(pitchStrTrim[3]).ToString("X2"));
+            string fullRoll = String.Format(rollForm, Convert.ToByte(rollStrTrim[0]).ToString("X2"), Convert.ToByte(rollStrTrim[1]).ToString("X2"), Convert.ToByte(rollStrTrim[3]).ToString("X2"));
             
             try
             {
@@ -125,23 +125,6 @@ namespace AC_app_2
         }
 
 
-        /*private void AC_GraphicsUpdated(object sender, GraphicsEventArgs e)
-        {
-            try
-            {
-                AC_STATUS currStat = e.Graphics.Status;
-                if ((currStat != null) && (currStat != gameStat))
-                {
-                    gameStat = currStat;
-                    Console.WriteLine("game status: " + gameStat + "\n");
-                }
-            }
-            catch (Exception except)
-            {
-                Console.WriteLine("caught : " + except);
-            }
-        }*/
-
         private void connectBtn_Click(object sender, RoutedEventArgs e)
         {
             connectBtn.IsEnabled = false;
@@ -158,6 +141,7 @@ namespace AC_app_2
             }
             
         }
+
 
         private void disconnectBtn_Click(object sender, RoutedEventArgs e)
         {
@@ -177,6 +161,7 @@ namespace AC_app_2
             }
         }
 
+
         private void scaleCheck_Changed(object sender, RoutedEventArgs e)
         {
             if (scaleCheck.IsChecked == true)
@@ -191,10 +176,12 @@ namespace AC_app_2
             }
         }
 
+
         private void motionSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             scaleBox.Text = Math.Round((decimal)motionSlider.Value, 0).ToString();
         }
+
 
         private void scaleBox_TextChanged(object sender, TextChangedEventArgs e)
         {
@@ -223,6 +210,7 @@ namespace AC_app_2
                 scaleBox.Text = currNum.ToString();
             }
         }
+
 
         private void MainWindow_Closed(object sender, EventArgs e)
         {
