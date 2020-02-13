@@ -25,12 +25,12 @@ namespace AC_app_2
     {
         AssettoCorsa acSession;
         SerialPort _port;
-        string pitchPosCommand = "02503A2B{0}{1}{2}03";    //STX P : + <3 digits> ETX
-        string pitchNegCommand = "02503A2D{0}{1}{2}03";    //STX P : - <3 digits> ETX
-        string rollPosCommand = "02523A2B{0}{1}{2}03";     //STX R : + <3 digits> ETX
-        string rollNegCommand = "02523A2D{0}{1}{2}03";     //STX R : - <3 digits> ETX
-        string zeroCommand = "025A03";                     //STX Z ETX
-        string stopCommand = "025303";                     //STX S ETX
+        string pitchPosCommand = "\u0002P:+{0}{1}{2}\u0003";    //STX P : + <3 digits> ETX
+        string pitchNegCommand = "\u0002P:-{0}{1}{2}\u0003";    //STX P : - <3 digits> ETX
+        string rollPosCommand = "\u0002R:+{0}{1}{2}\u0003";     //STX R : + <3 digits> ETX
+        string rollNegCommand = "\u0002R:-{0}{1}{2}\u0003";     //STX R : - <3 digits> ETX
+        string zeroCommand = "\u0002Z\u0003";                     //STX Z ETX
+        string stopCommand = "\u0002S\u0003";                     //STX S ETX
         float pitch;
         float roll;
         AC_STATUS gameStat;
@@ -52,7 +52,7 @@ namespace AC_app_2
             gameStat = AC_STATUS.AC_OFF;
 
             acSession = new AssettoCorsa();
-            acSession.PhysicsInterval = 500;        // these are in milliseconds
+            acSession.PhysicsInterval = 100;        // these are in milliseconds
             acSession.GraphicsInterval = 10000;
             acSession.StaticInfoInterval = 5000;
             acSession.PhysicsUpdated += AC_PhysicsUpdated; // Add event listener for StaticInfo
@@ -93,9 +93,9 @@ namespace AC_app_2
             string pitchStrTrim = pitchStr.Replace("-", "");
             string rollStrTrim = rollStr.Replace("-", "");
 
-            string fullPitch = String.Format(pitchForm, Convert.ToByte(pitchStrTrim[0]).ToString("X2"), Convert.ToByte(pitchStrTrim[1]).ToString("X2"), Convert.ToByte(pitchStrTrim[3]).ToString("X2"));
-            string fullRoll = String.Format(rollForm, Convert.ToByte(rollStrTrim[0]).ToString("X2"), Convert.ToByte(rollStrTrim[1]).ToString("X2"), Convert.ToByte(rollStrTrim[3]).ToString("X2"));
-            
+            string fullPitch = String.Format(pitchForm, pitchStrTrim[0], pitchStrTrim[1], pitchStrTrim[3]);
+            string fullRoll = String.Format(rollForm, rollStrTrim[0], rollStrTrim[1], rollStrTrim[3]);
+
             Console.WriteLine("Pitch = " + pitchStr + "°, Roll = " + rollStr + "° \n");
             Console.WriteLine("accel = " + e.Physics.SpeedKmh); //this is ~0 when in menu and pits but paused is constant
             try
@@ -127,7 +127,7 @@ namespace AC_app_2
             portCombo.IsEnabled = false;
             try
             {
-                _port = new SerialPort(portCombo.Text);
+                _port = new SerialPort(portCombo.Text, 256000);
                 _port.Open();
             }
             catch(Exception ex)
@@ -217,36 +217,86 @@ namespace AC_app_2
 
         private void forwardBtn_Click(object sender, RoutedEventArgs e)
         {
-            /*string pitch = -01.0
-            string fullPitch = String.Format(pitchForm, Convert.ToByte(pitchStrTrim[0]).ToString("X2"), Convert.ToByte(pitchStrTrim[1]).ToString("X2"), Convert.ToByte(pitchStrTrim[3]).ToString("X2"));
-            string fullRoll = String.Format(rollForm, Convert.ToByte(rollStrTrim[0]).ToString("X2"), Convert.ToByte(rollStrTrim[1]).ToString("X2"), Convert.ToByte(rollStrTrim[3]).ToString("X2"));
+            string pitch = "01.0"; // -01.0 deg
+            string roll = "00.0"; // 0 deg
+            string fullPitch = String.Format(pitchNegCommand, pitch[0], pitch[1], pitch[3]);
+            string fullRoll = String.Format(rollPosCommand, roll[0], roll[1], roll[3]);
             try
             {
                 if (_port.IsOpen)
                 {
                     Console.WriteLine("sending full forward command to port");
                     _port.Write(fullPitch);
+                    //_port.Write(fullRoll);
                 }
             }
             catch (Exception ex)
             {
                 Console.WriteLine("error writing to port: " + ex.Message);
-            }*/
+            }
         }
 
         private void rightBtn_Click(object sender, RoutedEventArgs e)
         {
-            //roll = +01.0
+            string pitch = "00.0"; // 0 deg
+            string roll = "01.0"; // +01.0 deg
+            string fullPitch = String.Format(pitchPosCommand, pitch[0], pitch[1], pitch[3]);
+            string fullRoll = String.Format(rollPosCommand, roll[0], roll[1], roll[3]);
+            try
+            {
+                if (_port.IsOpen)
+                {
+                    Console.WriteLine("sending full forward command to port");
+                    //_port.Write(fullPitch);
+                    _port.Write(fullRoll);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("error writing to port: " + ex.Message);
+            }
         }
 
         private void leftBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            string pitch = "00.0"; // 0 deg
+            string roll = "01.0"; // -01.0 deg
+            string fullPitch = String.Format(pitchPosCommand, pitch[0], pitch[1], pitch[3]);
+            string fullRoll = String.Format(rollNegCommand, roll[0], roll[1], roll[3]);
+            try
+            {
+                if (_port.IsOpen)
+                {
+                    Console.WriteLine("sending full forward command to port");
+                    //_port.Write(fullPitch);
+                    _port.Write(fullRoll);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("error writing to port: " + ex.Message);
+            }
         }
 
         private void backBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            string pitch = "01.0"; // +01.0 deg
+            string roll = "00.0"; // 0 deg
+            string fullPitch = String.Format(pitchPosCommand, pitch[0], pitch[1], pitch[3]);
+            string fullRoll = String.Format(rollPosCommand, roll[0], roll[1], roll[3]);
+            try
+            {
+                if (_port.IsOpen)
+                {
+                    Console.WriteLine("sending full forward command to port");
+                    _port.Write(fullPitch);
+                    //_port.Write(fullRoll);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("error writing to port: " + ex.Message);
+            }
         }
     }
 }
