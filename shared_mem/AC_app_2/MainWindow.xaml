@@ -23,10 +23,14 @@
         <Label Content="100%" HorizontalAlignment="Left" Margin="294.889,51,0,0" VerticalAlignment="Top" Height="26" Grid.Column="1" Width="39"/>
         <TextBlock x:Name="statusBar" HorizontalAlignment="Left" Margin="35,198,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="381" Height="40" TextAlignment="Center" FontWeight="Bold" Grid.ColumnSpan="2"/>
         <Label x:Name="demoLbl" Content="Movement Demo" Grid.Column="1" HorizontalAlignment="Left" Margin="471,37,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <Button x:Name="forwardBtn" Content="↑" Grid.Column="1" HorizontalAlignment="Left" Margin="504,81,0,0" VerticalAlignment="Top" Width="35" Height="35" FontWeight="Bold" FontSize="20" Click="forwardBtn_Click"/>
-        <Button x:Name="backBtn" Content="↓" Grid.Column="1" HorizontalAlignment="Left" Margin="504,157,0,0" VerticalAlignment="Top" Width="35" Height="35" FontWeight="Bold" FontSize="20" Click="backBtn_Click"/>
-        <Button x:Name="leftBtn" Content="←" Grid.Column="1" HorizontalAlignment="Left" Margin="466,119,0,0" VerticalAlignment="Top" Width="35" Height="35" FontWeight="Bold" FontSize="20" Click="leftBtn_Click"/>
-        <Button x:Name="rightBtn" Content="→" Grid.Column="1" HorizontalAlignment="Left" Margin="542,119,0,0" VerticalAlignment="Top" Width="35" Height="35" FontWeight="Bold" FontSize="20" Click="rightBtn_Click"/>
+        <Button x:Name="rearExtBtn" Content="+" Grid.Column="1" HorizontalAlignment="Left" Margin="504.889,166,0,0" VerticalAlignment="Top" Width="35" Height="21" FontWeight="Bold" Click="rearExtBtn_Click" FontSize="14"/>
+        <Button x:Name="rearRetBtn" Content="-" Grid.Column="1" HorizontalAlignment="Left" Margin="504.889,190,0,0" VerticalAlignment="Top" Width="35" Height="21" FontWeight="Bold" Click="rearRetBtn_Click" FontSize="14"/>
+        <Button x:Name="rightExtBtn" Content="+" Grid.Column="1" HorizontalAlignment="Left" Margin="544.889,116,0,0" VerticalAlignment="Top" Width="35" Height="21" FontWeight="Bold" Click="rightExtBtn_Click" FontSize="14"/>
+        <Button x:Name="rightRetBtn" Content="-" Grid.Column="1" HorizontalAlignment="Left" Margin="544.889,140,0,0" VerticalAlignment="Top" Width="35" Height="21" FontWeight="Bold" Click="rightRetBtn_Click" FontSize="14"/>
+        <Button x:Name="leftExtBtn" Content="+" Grid.Column="1" HorizontalAlignment="Left" Margin="462.889,116,0,0" VerticalAlignment="Top" Width="35" Height="21" FontWeight="Bold" Click="leftExtBtn_Click" FontSize="14"/>
+        <Button x:Name="leftRetBtn" Content="-" Grid.Column="1" HorizontalAlignment="Left" Margin="462.889,140,0,0" VerticalAlignment="Top" Width="35" Height="21" FontWeight="Bold" Click="leftRetBtn_Click" FontSize="14"/>
+        <Button x:Name="frontExtBtn" Content="+" Grid.Column="1" HorizontalAlignment="Left" Margin="504.889,66,0,0" VerticalAlignment="Top" Width="35" Height="21" FontWeight="Bold" Click="frontExtBtn_Click" FontSize="14"/>
+        <Button x:Name="frontRetBtn" Content="-" Grid.Column="1" HorizontalAlignment="Left" Margin="504.889,90,0,0" VerticalAlignment="Top" Width="35" Height="21" FontWeight="Bold" Click="frontRetBtn_Click" FontSize="14"/>
 
     </Grid>
 </Window>

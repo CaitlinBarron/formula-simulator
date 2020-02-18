@@ -215,7 +215,7 @@ namespace AC_app_2
             }
         }
 
-        private void forwardBtn_Click(object sender, RoutedEventArgs e)
+        private void frontExtBtn_Click(object sender, RoutedEventArgs e)
         {
             string pitch = "01.0"; // -01.0 deg
             string roll = "00.0"; // 0 deg
@@ -236,7 +236,14 @@ namespace AC_app_2
             }
         }
 
-        private void rightBtn_Click(object sender, RoutedEventArgs e)
+
+        private void frontRetBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+
+        private void rightExtBtn_Click(object sender, RoutedEventArgs e)
         {
             string pitch = "00.0"; // 0 deg
             string roll = "01.0"; // +01.0 deg
@@ -257,7 +264,14 @@ namespace AC_app_2
             }
         }
 
-        private void leftBtn_Click(object sender, RoutedEventArgs e)
+
+        private void rightRetBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+
+        private void leftExtBtn_Click(object sender, RoutedEventArgs e)
         {
             string pitch = "00.0"; // 0 deg
             string roll = "01.0"; // -01.0 deg
@@ -278,7 +292,14 @@ namespace AC_app_2
             }
         }
 
-        private void backBtn_Click(object sender, RoutedEventArgs e)
+
+        private void leftRetBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+
+        private void rearExtBtn_Click(object sender, RoutedEventArgs e)
         {
             string pitch = "01.0"; // +01.0 deg
             string roll = "00.0"; // 0 deg
@@ -297,6 +318,12 @@ namespace AC_app_2
             {
                 Console.WriteLine("error writing to port: " + ex.Message);
             }
+        }
+
+
+        private void rearRetBtn_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
