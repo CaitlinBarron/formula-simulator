@@ -103,7 +103,7 @@ namespace AC_app_2
                 if (_port.IsOpen)
                 {
                     Console.WriteLine("sending pitch and roll commands to port");
-                    _port.Write(fullPitch);
+                    //_port.Write(fullPitch);
                     _port.Write(fullRoll);
                 }   
             }
@@ -226,7 +226,7 @@ namespace AC_app_2
                 if (_port.IsOpen)
                 {
                     Console.WriteLine("sending full forward command to port");
-                    _port.Write(fullPitch);
+                    //_port.Write(fullPitch);
                     //_port.Write(fullRoll);
                 }
             }
@@ -289,7 +289,7 @@ namespace AC_app_2
                 if (_port.IsOpen)
                 {
                     Console.WriteLine("sending full forward command to port");
-                    _port.Write(fullPitch);
+                    //_port.Write(fullPitch);
                     //_port.Write(fullRoll);
                 }
             }
