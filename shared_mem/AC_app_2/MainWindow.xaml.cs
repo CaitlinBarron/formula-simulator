@@ -25,6 +25,7 @@ namespace AC_app_2
     {
         AssettoCorsa acSession;
         SerialPort _port;
+        ulong pitchRollCount = 0;
         string pitchPosCommand = "\u0002P:+{0}{1}{2}\u0003";    //STX P : + <3 digits> ETX
         string pitchNegCommand = "\u0002P:-{0}{1}{2}\u0003";    //STX P : - <3 digits> ETX
         string rollPosCommand = "\u0002R:+{0}{1}{2}\u0003";     //STX R : + <3 digits> ETX
@@ -52,7 +53,7 @@ namespace AC_app_2
             gameStat = AC_STATUS.AC_OFF;
 
             acSession = new AssettoCorsa();
-            acSession.PhysicsInterval = 100;        // these are in milliseconds
+            acSession.PhysicsInterval = 250;        // these are in milliseconds
             acSession.GraphicsInterval = 10000;
             acSession.StaticInfoInterval = 5000;
             acSession.PhysicsUpdated += AC_PhysicsUpdated; // Add event listener for StaticInfo
@@ -63,12 +64,20 @@ namespace AC_app_2
         }
 
 
+        private void port_DataReceived(object sender, SerialDataReceivedEventArgs e)
+        {
+            // Show all the incoming data in the port's buffer
+            Console.WriteLine(_port.ReadExisting());
+        }
+
+
         private void AC_PhysicsUpdated(object sender, PhysicsEventArgs e)
         {
             string pitchForm = pitchNegCommand;
             string rollForm = rollNegCommand;
             float pitch = e.Physics.Pitch * (180 / Convert.ToSingle(Math.PI));
             float roll = e.Physics.Roll * (180 / Convert.ToSingle(Math.PI));
+            pitchRollCount++;
 
             Graphics graphicsData = acSession.ReadGraphics();
             AC_STATUS currStat = graphicsData.Status;
@@ -102,9 +111,16 @@ namespace AC_app_2
             {
                 if (_port.IsOpen)
                 {
-                    Console.WriteLine("sending pitch and roll commands to port");
-                    //_port.Write(fullPitch);
-                    _port.Write(fullRoll);
+                    if (pitchRollCount%2 == 1)
+                    {
+                        Console.WriteLine("sending pitch commands");
+                        _port.Write(fullPitch);
+                    }
+                    else
+                    {
+                        Console.WriteLine("sending roll commands");
+                        _port.Write(fullRoll);
+                    }
                 }   
             }
             catch (Exception ex)
@@ -129,6 +145,7 @@ namespace AC_app_2
             {
                 _port = new SerialPort(portCombo.Text, 256000);
                 _port.Open();
+                _port.DataReceived += new SerialDataReceivedEventHandler(port_DataReceived);
             }
             catch(Exception ex)
             {
