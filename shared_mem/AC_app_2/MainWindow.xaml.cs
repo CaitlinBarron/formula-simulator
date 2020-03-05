@@ -32,9 +32,11 @@ namespace AC_app_2
         string rollNegCommand = "\u0002R:-{0}{1}{2}\u0003";     //STX R : - <3 digits> ETX
         string zeroCommand = "\u0002Z\u0003";                     //STX Z ETX
         string stopCommand = "\u0002S\u0003";                     //STX S ETX
+        string ack = "\u0002\u0006\u0003";
         float pitch;
         float roll;
         AC_STATUS gameStat;
+        bool controllerReady = true;
 
         public MainWindow()
         {
@@ -47,13 +49,15 @@ namespace AC_app_2
             motionSlider.IsEnabled = false;
             disconnectBtn.IsEnabled = false;
             scaleBox.IsEnabled = false;
+            controllerReady = true;
+
 
             pitch = 0;
             roll = 0;
             gameStat = AC_STATUS.AC_OFF;
 
             acSession = new AssettoCorsa();
-            acSession.PhysicsInterval = 250;        // these are in milliseconds
+            acSession.PhysicsInterval = 10;        // these are in milliseconds
             acSession.GraphicsInterval = 10000;
             acSession.StaticInfoInterval = 5000;
             acSession.PhysicsUpdated += AC_PhysicsUpdated; // Add event listener for StaticInfo
@@ -67,7 +71,14 @@ namespace AC_app_2
         private void port_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
             // Show all the incoming data in the port's buffer
-            Console.WriteLine(_port.ReadExisting());
+            String dataIn = "";
+            dataIn = _port.ReadExisting();
+            Console.WriteLine(dataIn);
+            if (dataIn.Contains("\u0006"))
+            {
+                controllerReady = true;
+                Console.WriteLine("ack recieved");
+            }
         }
 
 
@@ -77,7 +88,6 @@ namespace AC_app_2
             string rollForm = rollNegCommand;
             float pitch = e.Physics.Pitch * (180 / Convert.ToSingle(Math.PI));
             float roll = e.Physics.Roll * (180 / Convert.ToSingle(Math.PI));
-            pitchRollCount++;
 
             Graphics graphicsData = acSession.ReadGraphics();
             AC_STATUS currStat = graphicsData.Status;
@@ -109,8 +119,11 @@ namespace AC_app_2
             Console.WriteLine("accel = " + e.Physics.SpeedKmh); //this is ~0 when in menu and pits but paused is constant
             try
             {
-                if (_port.IsOpen)
+                if (_port.IsOpen && controllerReady)
                 {
+                    controllerReady = false;
+                    pitchRollCount++;
+
                     if (pitchRollCount%2 == 1)
                     {
                         Console.WriteLine("sending pitch commands");
